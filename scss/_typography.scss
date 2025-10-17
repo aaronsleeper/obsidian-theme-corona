@@ -26,42 +26,54 @@
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-8);
 	font-weight: var(--font-weight-medium);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 }
 
 .heading-2 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-7);
 	font-weight: var(--font-weight-medium);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 }
 
 .heading-3 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-6);
 	font-weight: var(--font-weight-black);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 }
 
 .heading-4 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-5);
 	font-weight: var(--font-weight-semibold);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 }
 
 .heading-5 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-semibold);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 }
 
 .heading-6 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-semibold);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 }
 
 .body-large {
@@ -69,6 +81,7 @@
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-relaxed);
+	letter-spacing: var(--letter-spacing-content);
 }
 
 .body-base {
@@ -76,6 +89,8 @@
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
+	letter-spacing: var(--letter-spacing-content);
 }
 
 .body-small {
@@ -83,6 +98,7 @@
 	font-size: var(--font-size-2);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
 }
 
 .caption {
@@ -90,6 +106,7 @@
 	font-size: var(--font-size-1);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
 }
 
 .label {
@@ -97,62 +114,7 @@
 	font-size: var(--font-size-2);
 	font-weight: var(--font-weight-semibold);
 	line-height: var(--line-height-normal);
-	letter-spacing: 0.05em;
-}
-
-/* Text Alignment Utilities */
-.text-left {
-	text-align: left;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.text-right {
-	text-align: right;
-}
-
-.text-justify {
-	text-align: justify;
-}
-
-/* Font Weight Utilities */
-.font-light {
-	font-weight: var(--font-weight-light);
-}
-
-.font-normal {
-	font-weight: var(--font-weight-normal);
-}
-
-.font-medium {
-	font-weight: var(--font-weight-medium);
-}
-
-.font-semibold {
-	font-weight: var(--font-weight-semibold);
-}
-
-.font-bold {
-	font-weight: var(--font-weight-bold);
-}
-
-.font-extrabold {
-	font-weight: var(--font-weight-extrabold);
-}
-
-/* Line Height Utilities */
-.leading-tight {
-	line-height: var(--line-height-tight);
-}
-
-.leading-normal {
-	line-height: var(--line-height-normal);
-}
-
-.leading-relaxed {
-	line-height: var(--line-height-relaxed);
+	letter-spacing: var(--letter-spacing-content);
 }
 
 /* Apply Typography to Obsidian Editor Elements */
@@ -165,7 +127,9 @@
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-8);
 	font-weight: var(--font-weight-black);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);
 }
@@ -177,7 +141,9 @@
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-7);
 	font-weight: var(--font-weight-black);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);
 }
@@ -189,7 +155,9 @@
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-6);
 	font-weight: var(--font-weight-black);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);
 }
@@ -201,7 +169,9 @@
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-5);
 	font-weight: var(--font-weight-normal);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);
 }
@@ -213,7 +183,9 @@
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-normal);
+	font-style: italic;
 	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);
 }
@@ -239,6 +211,7 @@
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
 }
 
 .cm-s-obsidian .cm-line.HyperMD-header {
@@ -256,6 +229,7 @@
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
 }
 
 /* Blockquotes */
@@ -326,6 +300,7 @@
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-5);
 	font-weight: var(--font-weight-normal);
+	font-style: italic;
 	line-height: var(--line-height-tight);
 }
 
@@ -338,6 +313,7 @@
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-semibold);
+	font-style: italic;
 	line-height: var(--line-height-tight);
 	padding-top: var(--spacing-3);
 	padding-bottom: var(--spacing-1);
@@ -348,6 +324,7 @@
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
 	color: var(--text-muted);
 }
 
