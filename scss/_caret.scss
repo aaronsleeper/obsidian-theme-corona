@@ -2,57 +2,146 @@
    Text Caret Styling
 ------------------------------ */
 
-/* Rainbow animation for caret */
-@keyframes caret-rainbow {
+/* Rainbow animation with double pulse for caret */
+@keyframes caret-rainbow-pulse {
+	/* Red - double pulse */
 	0% {
 		--caret-color: color-mix(in oklch, var(--color-red-mid) 50%, var(--color-red-min));
+		--caret-opacity: 0.9;
 	}
+	0.5% {
+		--caret-opacity: 0.3;
+	}
+	1% {
+		--caret-opacity: 0.9;
+	}
+	1.5% {
+		--caret-opacity: 0.3;
+	}
+	2% {
+		--caret-opacity: 0.9;
+	}
+	
+	/* Orange */
 	14.28% {
 		--caret-color: color-mix(in oklch, var(--color-orange-mid) 50%, var(--color-orange-min));
+		--caret-opacity: 0.9;
 	}
+	14.78% {
+		--caret-opacity: 0.3;
+	}
+	15.28% {
+		--caret-opacity: 0.9;
+	}
+	15.78% {
+		--caret-opacity: 0.3;
+	}
+	16.28% {
+		--caret-opacity: 0.9;
+	}
+	
+	/* Yellow */
 	28.56% {
 		--caret-color: color-mix(in oklch, var(--color-yellow-mid) 50%, var(--color-yellow-min));
+		--caret-opacity: 0.9;
 	}
+	29.06% {
+		--caret-opacity: 0.3;
+	}
+	29.56% {
+		--caret-opacity: 0.9;
+	}
+	30.06% {
+		--caret-opacity: 0.3;
+	}
+	30.56% {
+		--caret-opacity: 0.9;
+	}
+	
+	/* Green */
 	42.84% {
 		--caret-color: color-mix(in oklch, var(--color-green-mid) 50%, var(--color-green-min));
+		--caret-opacity: 0.9;
 	}
+	43.34% {
+		--caret-opacity: 0.3;
+	}
+	43.84% {
+		--caret-opacity: 0.9;
+	}
+	44.34% {
+		--caret-opacity: 0.3;
+	}
+	44.84% {
+		--caret-opacity: 0.9;
+	}
+	
+	/* Blue */
 	57.12% {
 		--caret-color: color-mix(in oklch, var(--color-blue-mid) 50%, var(--color-blue-min));
+		--caret-opacity: 0.9;
 	}
+	57.62% {
+		--caret-opacity: 0.3;
+	}
+	58.12% {
+		--caret-opacity: 0.9;
+	}
+	58.62% {
+		--caret-opacity: 0.3;
+	}
+	59.12% {
+		--caret-opacity: 0.9;
+	}
+	
+	/* Violet */
 	71.4% {
 		--caret-color: color-mix(in oklch, var(--color-violet-mid) 50%, var(--color-violet-min));
+		--caret-opacity: 0.9;
 	}
+	71.9% {
+		--caret-opacity: 0.3;
+	}
+	72.4% {
+		--caret-opacity: 0.9;
+	}
+	72.9% {
+		--caret-opacity: 0.3;
+	}
+	73.4% {
+		--caret-opacity: 0.9;
+	}
+	
+	/* Purple */
 	85.68% {
 		--caret-color: color-mix(in oklch, var(--color-purple-mid) 50%, var(--color-purple-min));
+		--caret-opacity: 0.9;
 	}
+	86.18% {
+		--caret-opacity: 0.3;
+	}
+	86.68% {
+		--caret-opacity: 0.9;
+	}
+	87.18% {
+		--caret-opacity: 0.3;
+	}
+	87.68% {
+		--caret-opacity: 0.9;
+	}
+	
+	/* Back to Red */
 	100% {
 		--caret-color: color-mix(in oklch, var(--color-red-mid) 50%, var(--color-red-min));
+		--caret-opacity: 0.9;
 	}
 }
 
 /* Apply caret styling */
 body {
 	--caret-color: var(--color-green-mid);
-	animation: caret-rainbow 10s infinite linear;
-}
-
-/* Double pulse animation for caret */
-@keyframes caret-pulse {
-	0%, 100% {
-		opacity: 0.9;
-	}
-	10% {
-		opacity: 0.3;
-	}
-	20% {
-		opacity: 0.9;
-	}
-	30% {
-		opacity: 0.3;
-	}
-	40%, 95% {
-		opacity: 0.9;
-	}
+	--caret-opacity: 0.9;
+	animation: caret-rainbow-pulse 10s ease-in-out infinite;
 }
 
 /* Block caret style for editors */
@@ -63,8 +152,7 @@ body {
 	border-bottom: none !important;
 	width: 0.6em !important;
 	background-color: var(--caret-color) !important;
-	opacity: 0.9;
-	animation: caret-pulse 2s ease-in-out infinite;
+	opacity: var(--caret-opacity) !important;
 }
 
 /* Caret color for inputs and textareas */
