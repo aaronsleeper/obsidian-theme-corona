@@ -171,11 +171,12 @@ textarea {
 
 /* Reduce opacity for all lines in the editor */
 .cm-editor .cm-content .cm-line {
-	opacity: 0.84;
+	opacity: 0.73;
+	transition: opacity 0.3s ease-in-out;
 }
 
 /* Full opacity for the active line (where the caret is) */
-.cm-editor .cm-active .cm-line,
-.cm-editor .cm-activeLine {
+.cm-editor .cm-content .cm-active.cm-line,
+.cm-editor .cm-content .cm-activeLine {
 	opacity: 1;
 }
