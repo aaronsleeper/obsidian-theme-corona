@@ -1,7 +1,7 @@
 :root {
 	/* Font Variables */
 	--font-inter: 'Inter', sans-serif;
-	--font-bricolage-grotesque: 'Playwrite US Trad', cursive;
+	--font-family-headings: 'Playwrite US Trad', cursive;
 	--font-monospace: 'JetBrains Mono', monospace;
 
 	/* Typography Scale */
@@ -69,5 +69,5 @@ body {
 	--font-text-theme: var(--font-inter);
 	--font-monospace-theme: var(--font-monospace);
 	--font-inter: var(--font-inter);
-	--font-bricolage-grotesque: var(--font-bricolage-grotesque);
+	--font-family-headings: var(--font-family-headings);
 }
