@@ -62,9 +62,14 @@
 	--z-tooltip: 1070;
 }
 
-/* Global theme settings */
+/* Obsidian Standard CSS Variables */
 body {
-	/* Typography */
+	/* Primary font variables that Obsidian uses */
+	--font-interface: var(--font-family-content);
+	--font-text: var(--font-family-content);
+	--font-monospace: var(--font-family-monospace);
+	
+	/* Theme-specific aliases for compatibility */
 	--font-interface-theme: var(--font-family-content);
 	--font-text-theme: var(--font-family-content);
 	--font-monospace-theme: var(--font-family-monospace);
