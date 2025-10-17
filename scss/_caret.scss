@@ -1,0 +1,59 @@
+/* ------------------------------
+   Text Caret Styling
+------------------------------ */
+
+/* Rainbow animation for caret */
+@keyframes caret-rainbow {
+	0% {
+		--caret-color: var(--color-red-mid);
+	}
+	14.28% {
+		--caret-color: var(--color-orange-mid);
+	}
+	28.56% {
+		--caret-color: var(--color-yellow-mid);
+	}
+	42.84% {
+		--caret-color: var(--color-green-mid);
+	}
+	57.12% {
+		--caret-color: var(--color-blue-mid);
+	}
+	71.4% {
+		--caret-color: var(--color-violet-mid);
+	}
+	85.68% {
+		--caret-color: var(--color-purple-mid);
+	}
+	100% {
+		--caret-color: var(--color-red-mid);
+	}
+}
+
+/* Apply caret styling */
+body {
+	--caret-color: var(--color-green-mid);
+	animation: caret-rainbow 10s infinite linear;
+}
+
+/* Block caret style for editors */
+.cm-editor .cm-cursor,
+.cm-editor .cm-dropCursor {
+	border-left: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+	width: 0.6em !important;
+	background-color: var(--caret-color) !important;
+	opacity: 0.7;
+}
+
+/* Caret color for inputs and textareas */
+.cm-editor .cm-content {
+	caret-color: var(--caret-color);
+}
+
+input,
+textarea {
+	caret-color: var(--caret-color);
+	caret-shape: block;
+}

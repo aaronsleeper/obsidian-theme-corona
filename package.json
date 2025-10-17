@@ -1,0 +1,13 @@
+{
+	"name": "sample-obsidian-theme",
+	"version": "1.0.0",
+	"scripts": {
+		"version": "node version-bump.mjs && git add manifest.json versions.json",
+		"build:scss": "sass scss/main.scss theme.css --style=compressed",
+		"watch:scss": "sass scss/main.scss theme.css --watch --style=compressed",
+		"dev": "npm run watch:scss"
+	},
+	"devDependencies": {
+		"sass": "^1.69.0"
+	}
+}

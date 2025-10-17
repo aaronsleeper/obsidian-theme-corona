@@ -1,0 +1,74 @@
+/* Light theme variables */
+.theme-light {
+	/* Base Semantic Colors */
+	--color-action: var(--color-blue-mid);
+	--color-info: var(--color-purple-mid);
+	--color-success: var(--color-green-mid);
+	--color-warning: var(--color-yellow-mid);
+	--color-critical: var(--color-red-mid);
+	--color-neutral: var(--color-dark-gray-min);
+
+	/* Background Colors */
+	--color-background-primary: var(--color-white);
+	--color-background-secondary: var(--color-light-gray-min);
+	--color-background-tertiary: oklch(from var(--color-light-gray-min) calc(l - 0.3) c h);
+
+	/* Text Colors */
+	--color-text-primary: var(--color-dark-gray-max);
+	--color-text-secondary: color-mix(in oklch, var(--color-dark-gray-max) 40%, transparent);
+	--color-text-tertiary: color-mix(in oklch, var(--color-dark-gray-max) 60%, transparent);
+	--color-text-inverse: var(--color-light-gray-min);
+
+	/* Border Colors */
+	--color-border-primary: color-mix(in oklch, var(--color-ligh-gray-min) 60%, var(--color-ligh-gray-mid));
+	--color-border-secondary: color-mix(in oklch, var(--color-ligh-gray-min) 60%, var(--color-ligh-gray-mid));
+	--color-border-focus: var(--color-action);
+
+	/* Text colors */
+	--text-normal: var(--color-dark-gray-max);
+	--text-muted: var(--color-dark-gray-mid);
+	--text-faint: var(--color-dark-gray-min);
+	--text-error: var(--color-red-max);
+	--text-success: var(--color-green-max);
+	--text-warning: var(--color-yellow-max);
+	--text-on-accent: var(--color-light-gray-min);
+	--text-on-accent-inverted: var(--color-dark-gray-max);
+
+	/* Primary backgrounds */
+	--background-primary: var(--color-light-gray-min);
+	--background-primary-alt: color-mix(in oklch, var(--color-ligh-gray-min) 60%, var(--color-ligh-gray-mid));
+	--background-secondary: var(--color-dark-gray-max);
+	--background-secondary-alt: var(--color-dark-gray-max);
+
+	/* Modifier backgrounds */
+	--background-modifier-border: var(--color-dark-gray-max);
+	--background-modifier-form-field: var(--color-dark-gray-max);
+	--background-modifier-form-field-highlighted: var(--color-dark-gray-max);
+	--background-modifier-box-shadow: var(--color-dark-gray-max);
+	--background-modifier-success: var(--color-dark-gray-max);
+	--background-modifier-error: var(--color-dark-gray-max);
+	--background-modifier-error-rgb: var(--color-dark-gray-max);
+	--background-modifier-cover: var(--color-dark-gray-max);
+
+	/* Interactive elements */
+	--interactive-normal: var(--color-dark-gray-max);
+	--interactive-hover: var(--color-dark-gray-max);
+	--interactive-accent: var(--color-dark-gray-max);
+	--interactive-accent-rgb: var(--color-dark-gray-max);
+	--interactive-accent-hover: var(--color-dark-gray-max);
+	--interactive-success: var(--color-dark-gray-max);
+
+	/* UI elements */
+	--titlebar-background: var(--color-dark-gray-max);
+	--titlebar-background-focused: var(--color-dark-gray-max);
+	--ribbon-background: var(--color-dark-gray-max);
+	--ribbon-background-collapsed: var(--color-dark-gray-max);
+	--tab-background-active: var(--color-dark-gray-max);
+	--tab-text-color-active: var(--color-dark-gray-max);
+	--tab-text-color-focused-active: var(--color-dark-gray-max);
+
+	/* Scrollbars */
+	--scrollbar-bg: var(--color-dark-gray-max);
+	--scrollbar-thumb-bg: var(--color-dark-gray-max);
+	--scrollbar-active-thumb-bg: var(--color-dark-gray-max);
+}
