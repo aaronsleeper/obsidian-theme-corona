@@ -1,15 +1,16 @@
 /* Typography System */
 
 /* 
- * Playfair Display Variable Font Axes:
- * - Weight (wght): 400-900 (use any value like 450, 625, 875)
- * - Optical Size (opsz): 5-1200 (automatically adjusts based on font-size)
+ * Playfair Display Font Weights Available:
+ * 400 (Normal), 500 (Medium), 600 (Semi-Bold), 700 (Bold), 800 (Extra-Bold), 900 (Black)
  * 
- * Use standard font-weight for weight axis:
- *   font-weight: 625; 
+ * Note: Google Fonts @import doesn't reliably deliver true variable fonts.
+ * Using static weight files ensures consistent rendering across all weights.
  * 
- * Or use font-variation-settings for manual control:
- *   font-variation-settings: 'wght' 625, 'opsz' 48;
+ * To use true variable fonts with intermediate weights, you would need to:
+ * 1. Download the variable font file from Google Fonts
+ * 2. Self-host it in your theme
+ * 3. Use @font-face with the local file
  */
 
 :root {
@@ -36,28 +37,28 @@
 .heading-3 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-6);
-	font-weight: var(--font-weight-medium);
+	font-weight: var(--font-weight-black);
 	line-height: var(--line-height-tight);
 }
 
 .heading-4 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-5);
-	font-weight: var(--font-weight-normal);
+	font-weight: var(--font-weight-semibold);
 	line-height: var(--line-height-tight);
 }
 
 .heading-5 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-4);
-	font-weight: var(--font-weight-normal);
+	font-weight: var(--font-weight-semibold);
 	line-height: var(--line-height-tight);
 }
 
 .heading-6 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-3);
-	font-weight: var(--font-weight-normal);
+	font-weight: var(--font-weight-semibold);
 	line-height: var(--line-height-tight);
 }
 
@@ -161,7 +162,7 @@
 .markdown-preview-view h1 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-8);
-	font-weight: var(--font-weight-medium);
+	font-weight: var(--font-weight-black);
 	line-height: var(--line-height-tight);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);
@@ -173,7 +174,7 @@
 .markdown-preview-view h2 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-7);
-	font-weight: var(--font-weight-medium);
+	font-weight: var(--font-weight-black);
 	line-height: var(--line-height-tight);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);
@@ -185,7 +186,7 @@
 .markdown-preview-view h3 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-6);
-	font-weight: var(--font-weight-medium);
+	font-weight: var(--font-weight-black);
 	line-height: var(--line-height-tight);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);
@@ -221,7 +222,7 @@
 .markdown-preview-view h6 {
 	font-family: var(--font-family-headings);
 	font-size: var(--font-size-3);
-	font-weight: var(--font-weight-normal);
+	font-weight: var(--font-weight-semibold);
 	line-height: var(--line-height-tight);
 	margin-top: var(--spacing-3);
 	margin-bottom: var(--spacing-1);

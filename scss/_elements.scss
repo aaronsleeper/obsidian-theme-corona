@@ -2,6 +2,7 @@
 
 .notice {
 	position: relative;
+	overflow: hidden;
 	padding-left: calc(8px + var(--spacing-3)); /* Add space for the rectangle plus some padding */
 
 	&::before {
@@ -11,6 +12,6 @@
 		top: 0;
 		width: 8px;
 		height: 100%;
-		background-color: var(--color-red-mid);
+		background-color: var(--color-pink-mid);
 	}
 }

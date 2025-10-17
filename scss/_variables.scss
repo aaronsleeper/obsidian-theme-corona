@@ -31,6 +31,15 @@
 	--font-weight-semibold: 600;
 	--font-weight-bold: 700;
 	--font-weight-extrabold: 800;
+	--font-weight-black: 900;
+
+	/* Variable Font Settings (for fonts that support font-variation-settings) */
+	--font-var-light: 'wght' 300;
+	--font-var-normal: 'wght' 400;
+	--font-var-medium: 'wght' 500;
+	--font-var-semibold: 'wght' 600;
+	--font-var-bold: 'wght' 700;
+	--font-var-extrabold: 'wght' 800;
 
 	/* Line Heights */
 	--line-height-tight: 1.25;
