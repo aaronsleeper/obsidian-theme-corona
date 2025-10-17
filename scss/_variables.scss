@@ -1,8 +1,8 @@
 :root {
 	/* Font Variables */
-	--font-inter: 'Inter', sans-serif;
+	--font-family-content: 'Inter', sans-serif;
 	--font-family-headings: 'Playwrite US Trad', cursive;
-	--font-monospace: 'JetBrains Mono', monospace;
+	--font-family-monospace: 'JetBrains Mono', monospace;
 
 	/* Typography Scale */
 	--font-size-1: 0.75rem; /* 12px */
@@ -65,9 +65,7 @@
 /* Global theme settings */
 body {
 	/* Typography */
-	--font-interface-theme: var(--font-inter);
-	--font-text-theme: var(--font-inter);
-	--font-monospace-theme: var(--font-monospace);
-	--font-inter: var(--font-inter);
-	--font-family-headings: var(--font-family-headings);
+	--font-interface-theme: var(--font-family-content);
+	--font-text-theme: var(--font-family-content);
+	--font-monospace-theme: var(--font-family-monospace);
 }

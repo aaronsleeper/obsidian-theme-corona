@@ -44,35 +44,35 @@
 }
 
 .body-large {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-relaxed);
 }
 
 .body-base {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-normal);
 }
 
 .body-small {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-2);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-normal);
 }
 
 .caption {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-1);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-normal);
 }
 
 .label {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-2);
 	font-weight: var(--font-weight-semibold);
 	line-height: var(--line-height-normal);
@@ -214,7 +214,7 @@
 .cm-line,
 .markdown-preview-view p,
 .markdown-preview-section {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-normal);
@@ -231,7 +231,7 @@
 .markdown-preview-view ul,
 .markdown-preview-view ol,
 .markdown-preview-view li {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-normal);
@@ -241,7 +241,7 @@
 .cm-quote,
 .HyperMD-quote,
 .markdown-preview-view blockquote {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-relaxed);
@@ -258,7 +258,7 @@
 .cm-line.HyperMD-codeblock,
 .markdown-preview-section pre,
 .markdown-preview-view pre {
-	font-family: var(--font-monospace-theme);
+	font-family: var(--font-family-monospace);
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-relaxed);
@@ -268,7 +268,7 @@
 /* Inline code */
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view code {
-	font-family: var(--font-monospace-theme);
+	font-family: var(--font-family-monospace);
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-medium);
 	line-height: var(--line-height-relaxed);
@@ -283,7 +283,7 @@
 /* Tab headers */
 .workspace-tab-header,
 .workspace-tab-header-inner {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-2);
 	font-weight: var(--font-weight-semibold);
 	line-height: var(--line-height-normal);
@@ -293,7 +293,7 @@
 /* Buttons */
 .button,
 .mod-cta {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-2);
 	font-weight: var(--font-weight-semibold);
 	line-height: var(--line-height-normal);
@@ -323,7 +323,7 @@
 }
 
 .setting-item .setting-item-description {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-normal);
@@ -340,7 +340,7 @@
 
 /* Status bar */
 .status-bar-item {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-1);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-normal);
@@ -348,14 +348,14 @@
 
 /* Search results */
 .search-result-file-title {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-3);
 	font-weight: var(--font-weight-medium);
 	line-height: var(--line-height-normal);
 }
 
 .search-result-file-match {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-relaxed);
@@ -363,7 +363,7 @@
 
 /* Tooltips */
 .tooltip {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-1);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-normal);
@@ -372,7 +372,7 @@
 /* File explorer */
 .nav-file-title,
 .nav-folder-title {
-	font-family: var(--font-inter);
+	font-family: var(--font-family-content);
 	font-size: var(--font-size-4);
 	font-weight: var(--font-weight-light);
 	line-height: var(--line-height-relaxed);
