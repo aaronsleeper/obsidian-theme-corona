@@ -7,6 +7,11 @@
 	--font-family-headings: 'Playfair Display', serif;
 	--font-family-monospace: 'JetBrains Mono', monospace;
 
+	/* Variable Font Settings for Playfair Display */
+	/* Playfair Display has 3 axes: wght (400-900), opsz (5-1200), wdth (not included in Google Fonts version) */
+	font-synthesis: none; /* Prevent browser from synthesizing bold/italic */
+	font-feature-settings: normal;
+
 	/* Typography Scale */
 	--font-size-1: 0.75rem; /* 12px */
 	--font-size-2: 0.875rem; /* 14px */

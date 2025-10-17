@@ -1,5 +1,17 @@
 /* Typography System */
 
+/* 
+ * Playfair Display Variable Font Axes:
+ * - Weight (wght): 400-900 (use any value like 450, 625, 875)
+ * - Optical Size (opsz): 5-1200 (automatically adjusts based on font-size)
+ * 
+ * Use standard font-weight for weight axis:
+ *   font-weight: 625; 
+ * 
+ * Or use font-variation-settings for manual control:
+ *   font-variation-settings: 'wght' 625, 'opsz' 48;
+ */
+
 :root {
 	--h1-font: var(--font-family-headings);
 	--h2-font: var(--font-family-headings);
