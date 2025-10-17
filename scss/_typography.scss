@@ -1,16 +1,18 @@
 /* Typography System */
 
 /* 
- * Playfair Display Font Weights Available:
- * 400 (Normal), 500 (Medium), 600 (Semi-Bold), 700 (Bold), 800 (Extra-Bold), 900 (Black)
+ * Playfair Display Variable Font (following Google Fonts guidance):
+ * - Weight range: 400-900 (use any value like 450, 625, 875)
+ * - Italic support: Both regular and italic styles
+ * - Optical sizing: Automatically adjusts based on font-size
  * 
- * Note: Google Fonts @import doesn't reliably deliver true variable fonts.
- * Using static weight files ensures consistent rendering across all weights.
+ * Google Fonts URL format: ital,wght@0,400..900;1,400..900
+ * - @0,400..900 = regular style with weight range 400-900
+ * - @1,400..900 = italic style with weight range 400-900
  * 
- * To use true variable fonts with intermediate weights, you would need to:
- * 1. Download the variable font file from Google Fonts
- * 2. Self-host it in your theme
- * 3. Use @font-face with the local file
+ * Usage:
+ *   font-weight: 625; // Any value from 400-900
+ *   font-style: italic; // For italic variants
  */
 
 :root {
