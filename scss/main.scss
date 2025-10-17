@@ -1,6 +1,7 @@
 /* Corona Theme - Main SCSS File */
 
 // Import partials using modern @use syntax
+@use 'variables';
 @use 'color-choices';
 @use 'color-decisions-light';
 @use 'color-decisions-dark';

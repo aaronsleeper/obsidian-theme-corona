@@ -1,0 +1,18 @@
+# Corona Theme - Obsidian Theme Development Rules
+
+## Context7 Documentation
+
+When working on this Obsidian theme, always fetch the latest Obsidian theme documentation from Context7 to ensure accurate implementation of theme properties and CSS variables.
+
+- [[calls]]
+  match = "when working on Obsidian theme files, CSS variables, or theme.css modifications"
+  tool = "context7"
+  library = "/websites/help_obsidian_md"
+  url = "https://context7.com/websites/obsidian_md"
+
+## Project Preferences
+
+- This is an Obsidian theme located in `.obsidian/themes/Corona`
+- Use CSS custom properties over SCSS variables when possible
+- Use OKLCH color space for color-mix functions
+- Keep `tokens.scss` minimal with only import statements

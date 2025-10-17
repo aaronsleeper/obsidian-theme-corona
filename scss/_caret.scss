@@ -21,7 +21,7 @@
 	2% {
 		--caret-opacity: 0.9;
 	}
-	
+
 	/* Orange */
 	14.28% {
 		--caret-color: color-mix(in oklch, var(--color-orange-mid) 50%, var(--color-orange-min));
@@ -39,7 +39,7 @@
 	16.28% {
 		--caret-opacity: 0.9;
 	}
-	
+
 	/* Yellow */
 	28.56% {
 		--caret-color: color-mix(in oklch, var(--color-yellow-mid) 50%, var(--color-yellow-min));
@@ -57,7 +57,7 @@
 	30.56% {
 		--caret-opacity: 0.9;
 	}
-	
+
 	/* Green */
 	42.84% {
 		--caret-color: color-mix(in oklch, var(--color-green-mid) 50%, var(--color-green-min));
@@ -75,7 +75,7 @@
 	44.84% {
 		--caret-opacity: 0.9;
 	}
-	
+
 	/* Blue */
 	57.12% {
 		--caret-color: color-mix(in oklch, var(--color-blue-mid) 50%, var(--color-blue-min));
@@ -93,7 +93,7 @@
 	59.12% {
 		--caret-opacity: 0.9;
 	}
-	
+
 	/* Violet */
 	71.4% {
 		--caret-color: color-mix(in oklch, var(--color-violet-mid) 50%, var(--color-violet-min));
@@ -111,7 +111,7 @@
 	73.4% {
 		--caret-opacity: 0.9;
 	}
-	
+
 	/* Purple */
 	85.68% {
 		--caret-color: color-mix(in oklch, var(--color-purple-mid) 50%, var(--color-purple-min));
@@ -129,7 +129,7 @@
 	87.68% {
 		--caret-opacity: 0.9;
 	}
-	
+
 	/* Back to Red */
 	100% {
 		--caret-color: color-mix(in oklch, var(--color-red-mid) 50%, var(--color-red-min));
@@ -163,4 +163,19 @@ body {
 input,
 textarea {
 	caret-color: var(--caret-color);
+}
+
+/* ------------------------------
+   Editor Content Opacity
+------------------------------ */
+
+/* Reduce opacity for all lines in the editor */
+.cm-editor .cm-content .cm-line {
+	opacity: 0.84;
+}
+
+/* Full opacity for the active line (where the caret is) */
+.cm-editor .cm-active .cm-line,
+.cm-editor .cm-activeLine {
+	opacity: 1;
 }
