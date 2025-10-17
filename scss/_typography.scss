@@ -1,5 +1,11 @@
 /* Typography System */
 
+:root {
+	--h1-font: var(--font-family-headings);
+	--h2-font: var(--font-family-headings);
+	--h3-font: var(--font-family-headings);
+	--inline-title-font: var(--font-family-headings);
+}
 /* Typography Utility Classes */
 .heading-1 {
 	font-family: var(--font-family-headings);
@@ -332,8 +338,8 @@
 
 /* View headers */
 .view-header-title {
-	font-family: var(--font-family-headings);
-	font-size: var(--font-size-4);
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
 	font-weight: var(--font-weight-normal);
 	line-height: var(--line-height-tight);
 }

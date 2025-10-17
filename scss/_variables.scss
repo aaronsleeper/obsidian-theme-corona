@@ -1,4 +1,10 @@
 :root {
+	/* Font Options for Testing */
+	--font-crimson-pro: 'Crimson Pro', serif;
+	--font-source-serif: 'Source Serif 4', serif;
+	--font-newsreader: 'Newsreader', serif;
+	--font-fraunces: 'Fraunces', serif;
+
 	/* Font Variables */
 	--font-family-content: 'Inter', sans-serif;
 	--font-family-headings: 'Playwrite US Trad', cursive;
@@ -68,7 +74,7 @@ body {
 	--font-interface: var(--font-family-content);
 	--font-text: var(--font-family-content);
 	--font-monospace: var(--font-family-monospace);
-	
+
 	/* Theme-specific aliases for compatibility */
 	--font-interface-theme: var(--font-family-content);
 	--font-text-theme: var(--font-family-content);
