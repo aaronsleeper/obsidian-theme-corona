@@ -1,0 +1,16 @@
+/* UI Elements */
+
+.notice {
+	position: relative;
+	padding-left: calc(8px + var(--spacing-3)); /* Add space for the rectangle plus some padding */
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 8px;
+		height: 100%;
+		background-color: var(--color-red-mid);
+	}
+}

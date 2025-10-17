@@ -35,9 +35,9 @@
 	--background-modifier-hover: var(--background-primary);
 	--background-modifier-box-shadow: var(--color-ink-max);
 	--background-modifier-active-hover: oklch(from var(--background-modifier-hover) calc(l - 0.05) c h);
-	--background-modifier-success: var(--color-green-min);
+	--background-modifier-success: var(--color-dark-gray-mid);
 	--background-modifier-success-rgb: color-mix(in srgb, var(--background-modifier-success) 100%, transparent);
-	--background-modifier-error: var(--color-red-min);
+	--background-modifier-error: var(--color-dark-gray-mid);
 	--background-modifier-error-rgb: color-mix(in srgb, var(--background-modifier-error) 100%, transparent);
 	--background-modifier-error-hover: oklch(from var(--background-modifier-error) calc(l - 0.05) c h);
 	--background-modifier-message: oklch(from var(--background-modifier-error) calc(l - 0.05) c h);
