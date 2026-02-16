@@ -1,0 +1,177 @@
+/* ==================================
+   Elements — UI Components
+   ==================================
+   Notices, callouts, tags, checkboxes, tables,
+   tooltips, buttons, toggles, line numbers.
+   ================================== */
+
+/* ------------------------------
+   Notices
+------------------------------ */
+
+.notice {
+	position: relative;
+	overflow: hidden;
+	padding-left: calc(var(--accent-bar-width) + var(--spacing-3));
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: var(--accent-bar-width);
+		height: 100%;
+		background-color: var(--color-pink-mid);
+	}
+}
+
+/* ------------------------------
+   Callouts
+------------------------------ */
+
+.callout {
+	border-radius: var(--radius-3);
+	border-left: var(--accent-bar-width) solid;
+	padding: var(--spacing-2) var(--spacing-3);
+}
+
+.callout-title {
+	font-family: var(--font-family-content);
+	font-weight: var(--font-weight-semibold);
+	font-size: var(--font-size-3);
+}
+
+.callout-content {
+	font-size: var(--font-size-3);
+}
+
+/* ------------------------------
+   Tags
+------------------------------ */
+
+.tag,
+.cm-hashtag {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-1);
+	font-weight: var(--font-weight-medium);
+	background-color: var(--tag-background);
+	color: var(--tag-color);
+	border-radius: var(--radius-5);
+	padding: var(--spacing-1) var(--spacing-2);
+	transition: background-color var(--transition-fast) var(--ease-default);
+
+	&:hover {
+		background-color: var(--tag-background-hover);
+	}
+}
+
+/* ------------------------------
+   Checkboxes
+------------------------------ */
+
+.task-list-item-checkbox {
+	border: var(--border-width-medium) solid var(--checkbox-border-color);
+	border-radius: var(--radius-1);
+	transition: background-color var(--transition-fast) var(--ease-default),
+		border-color var(--transition-fast) var(--ease-default);
+}
+
+input[type='checkbox']:checked,
+.task-list-item-checkbox:checked {
+	background-color: var(--checkbox-color);
+	border-color: var(--checkbox-color);
+}
+
+/* ------------------------------
+   Tables
+------------------------------ */
+
+.markdown-preview-view table {
+	border-collapse: collapse;
+}
+
+.markdown-preview-view th,
+.markdown-preview-view td {
+	border: var(--border-width-thin) solid var(--table-border-color);
+	padding: var(--spacing-1) var(--spacing-2);
+}
+
+.markdown-preview-view th {
+	background-color: var(--table-header-background);
+	font-weight: var(--font-weight-semibold);
+}
+
+/* ------------------------------
+   Tooltips
+------------------------------ */
+
+.tooltip {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-1);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-normal);
+	border-radius: var(--radius-2);
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+.button,
+.mod-cta {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-ui);
+	border-radius: var(--radius-2);
+	transition: background-color var(--transition-fast) var(--ease-default),
+		color var(--transition-fast) var(--ease-default);
+}
+
+.mod-cta {
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+
+	&:hover {
+		background-color: var(--interactive-accent-hover);
+	}
+}
+
+.mod-warning {
+	background-color: var(--background-modifier-error);
+	color: var(--text-error);
+}
+
+/* ------------------------------
+   Toggles
+------------------------------ */
+
+.checkbox-container {
+	border-radius: var(--radius-5);
+	transition: background-color var(--transition-fast) var(--ease-default);
+}
+
+/* ------------------------------
+   View Headers
+------------------------------ */
+
+.view-header-title {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--line-height-tight);
+}
+
+/* ------------------------------
+   Line Numbers
+------------------------------ */
+
+/*
+ * Keep gutter element styling minimal — CodeMirror 6 manages
+ * heights via inline styles. Overriding display/padding/box-sizing
+ * can break the height sync between content and gutter.
+ */
+.markdown-source-view.mod-cm6 .cm-gutters .cm-lineNumbers .cm-gutterElement {
+	padding-right: var(--spacing-2);
+}

@@ -1,5 +1,18 @@
 /* Dark theme variables */
 .theme-dark {
+	--color-base-00: var(--color-ink-min);
+	--color-base-05: color-mix(in oklch, var(--color-ink-min) 10%, var(--color-ink-mid));
+	--color-base-10: color-mix(in oklch, var(--color-ink-min) 20%, var(--color-ink-mid));
+	--color-base-20: color-mix(in oklch, var(--color-ink-min) 40%, var(--color-ink-mid));
+	--color-base-25: color-mix(in oklch, var(--color-ink-min) 50%, var(--color-ink-mid));
+	--color-base-30: color-mix(in oklch, var(--color-ink-min) 60%, var(--color-ink-mid));
+	--color-base-35: color-mix(in oklch, var(--color-ink-min) 70%, var(--color-ink-mid));
+	--color-base-40: color-mix(in oklch, var(--color-ink-min) 80%, var(--color-ink-mid));
+	--color-base-50: var(--color-ink-mid);
+	--color-base-60: color-mix(in oklch, var(--color-ink-mid) 30%, var(--color-ink-max));
+	--color-base-70: color-mix(in oklch, var(--color-ink-mid) 35%, var(--color-ink-max));
+	--color-base-100: var(--color-ink-max);
+
 	/* Text colors */
 	--text-normal: var(--color-light-gray-min);
 	--text-muted: color-mix(in oklch, var(--color-light-gray-min) 60%, transparent);
@@ -15,51 +28,6 @@
 	--text-highlight-bg: var(--color-pink-mid);
 	--caret-color: var(--color-pink-mid);
 
-	/* Primary backgrounds */
-	--background-primary: color-mix(in oklch, var(--color-dark-gray-max) 84%, var(--color-dark-gray-mid));
-	--background-primary-alt: color-mix(in oklch, var(--color-dark-gray-max) 90%, var(--color-dark-gray-mid));
-	--background-secondary: color-mix(in oklch, var(--color-dark-gray-max) 100%, var(--color-dark-gray-mid));
-	--background-secondary-alt: color-mix(in oklch, var(--color-dark-gray-max) 20%, var(--color-dark-gray-mid));
-
-	/* Modifier backgrounds */
-	--background-modifier-border: color-mix(in oklch, var(--color-dark-gray-min) 20%, var(--color-dark-gray-mid));
-	--background-modifier-border-hover: var(--background-modifier-border);
-	--background-modifier-border-focus: var(--background-modifier-border);
-	--background-modifier-form-field: color-mix(in oklch, var(--color-dark-gray-min) 20%, var(--color-dark-gray-mid));
-	--background-modifier-form-field-highlighted: color-mix(
-		in oklch,
-		var(--color-dark-gray-min) 20%,
-		var(--color-dark-gray-mid)
-	);
-	--background-modifier-cover: color-mix(in srgb, var(--color-dark-gray-max) 42%, transparent);
-	--background-modifier-hover: var(--background-primary);
-	--background-modifier-box-shadow: var(--color-ink-max);
-	--background-modifier-active-hover: oklch(from var(--background-modifier-hover) calc(l - 0.05) c h);
-	--background-modifier-success: var(--color-dark-gray-mid);
-	--background-modifier-success-rgb: color-mix(in srgb, var(--background-modifier-success) 100%, transparent);
-	--background-modifier-error: var(--color-dark-gray-mid);
-	--background-modifier-error-rgb: color-mix(in srgb, var(--background-modifier-error) 100%, transparent);
-	--background-modifier-error-hover: oklch(from var(--background-modifier-error) calc(l - 0.05) c h);
-	--background-modifier-message: oklch(from var(--background-modifier-error) calc(l - 0.05) c h);
-
-	/* Interactive */
-	--interactive-normal: var(--color-pink-mid);
-	--interactive-hover: oklch(from var(--interactive-normal) calc(l - 0.05) c h);
-	--interactive-accent: color-mix(in oklch, var(--color-pink-mid) 42%, var(--color-pink-max));
-	--interactive-accent-hsl: color-mix(in hsl, var(--interactive-accent) 100%, transparent);
-	--interactive-accent-hover: oklch(from var(--interactive-accent) calc(l - 0.05) c h);
-
-	/* UI elements */
-	--titlebar-background: var(--color-dark-gray-max);
-	--titlebar-background-focused: oklch(from var(--titlebar-background) calc(l + 0.05) c h);
-	--ribbon-background: oklch(from var(--titlebar-background) calc(l + 0.1) c h);
-	--ribbon-background-collapsed: var(--ribbon-background);
-	--tab-background-active: oklch(from var(--titlebar-background) calc(l + 0.15) c h);
-	--tab-text-color-active: var(--text-muted);
-	--tab-text-color-focused-active: var(--text-normal);
-
-	/* Scrollbars */
-	--scrollbar-bg: var(--light-gray-min);
-	--scrollbar-thumb-bg: var(--light-gray-min);
-	--scrollbar-active-thumb-bg: var(--light-gray-min);
+	/* Backgrounds */
+	--background-primary: var(--color-base-60);
 }

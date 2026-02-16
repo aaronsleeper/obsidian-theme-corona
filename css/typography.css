@@ -1,18 +1,21 @@
-/* Typography System */
+/* ==================================
+   Typography
+   ==================================
+   Font family, size, weight, line-height, and
+   letter-spacing assignments. Utility classes
+   and Obsidian element font mappings.
+   No visual styling (colors, backgrounds, borders).
+   ================================== */
 
-/* 
+/*
  * Playfair Display Variable Font (following Google Fonts guidance):
  * - Weight range: 400-900 (use any value like 450, 625, 875)
  * - Italic support: Both regular and italic styles
  * - Optical sizing: Automatically adjusts based on font-size
- * 
+ *
  * Google Fonts URL format: ital,wght@0,400..900;1,400..900
  * - @0,400..900 = regular style with weight range 400-900
  * - @1,400..900 = italic style with weight range 400-900
- * 
- * Usage:
- *   font-weight: 625; // Any value from 400-900
- *   font-style: italic; // For italic variants
  */
 
 :root {
@@ -21,7 +24,10 @@
 	--h3-font: var(--font-family-headings);
 	--inline-title-font: var(--font-family-headings);
 }
-/* Typography Utility Classes */
+
+/* ------------------------------
+   Utility Classes
+------------------------------ */
 
 /* Common heading styles */
 .heading-1,
@@ -36,7 +42,6 @@
 	letter-spacing: var(--letter-spacing-heading);
 }
 
-/* Individual heading sizes and weights */
 .heading-1 {
 	font-size: var(--font-size-8);
 	font-weight: var(--font-weight-medium);
@@ -87,7 +92,6 @@
 	line-height: var(--line-height-normal);
 }
 
-/* Individual body text sizes */
 .body-large {
 	font-size: var(--font-size-4);
 	line-height: var(--line-height-relaxed);
@@ -112,11 +116,11 @@
 	letter-spacing: var(--letter-spacing-content);
 }
 
-/* Apply Typography to Obsidian Editor Elements */
+/* ------------------------------
+   Obsidian Element Typography
+------------------------------ */
 
-/* Headings in both Live Preview and Reading Mode */
-
-/* Common heading styles for all levels - increased specificity to override app.css */
+/* Common heading font for all levels in editor and preview */
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
 .markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,
@@ -164,20 +168,14 @@
 	letter-spacing: var(--letter-spacing-heading);
 }
 
-/* Use padding instead of margin for editor headings to ensure line numbers align */
-.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
-.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,
-.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,
-.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,
-.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,
-.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-6.cm-line {
-	padding-top: var(--spacing-3) !important;
-	padding-bottom: var(--spacing-3) !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-}
+/*
+ * Heading spacing in editor:
+ * Do NOT use padding on .cm-line — CodeMirror 6 sets gutter element
+ * heights via inline styles based on DOM measurement. Extra padding
+ * on .cm-line causes cumulative drift between line numbers and content.
+ * The larger font-size + line-height already provides visual spacing.
+ */
 
-/* Keep margins for preview view */
 .markdown-preview-view h1,
 .markdown-preview-view h2,
 .markdown-preview-view h3,
@@ -188,7 +186,7 @@
 	margin-bottom: var(--spacing-1) !important;
 }
 
-/* Italic style for H1-H5 - increased specificity */
+/* Italic style for H1-H5 */
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
 .markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,
@@ -227,7 +225,7 @@
 	font-style: italic;
 }
 
-/* H1-H3 black weight - increased specificity */
+/* H1-H3 black weight */
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
 .markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,
@@ -252,7 +250,7 @@
 	font-weight: var(--font-weight-black);
 }
 
-/* H4-H5 normal weight - increased specificity */
+/* H4-H5 normal weight */
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,
 .markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,
@@ -270,7 +268,7 @@
 	font-weight: var(--font-weight-normal);
 }
 
-/* Individual heading sizes - increased specificity */
+/* Individual heading sizes */
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
 .markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,
@@ -332,7 +330,7 @@
 	font-weight: var(--font-weight-semibold);
 }
 
-/* Body text, paragraphs, and lists - common styles */
+/* Body text, paragraphs, and lists */
 .cm-content,
 .cm-line,
 .markdown-preview-view p,
@@ -350,21 +348,7 @@
 	letter-spacing: var(--letter-spacing-content);
 }
 
-/* Blockquotes */
-.cm-quote,
-.HyperMD-quote,
-.markdown-preview-view blockquote {
-	font-family: var(--font-family-content);
-	font-size: var(--font-size-4);
-	font-weight: var(--font-weight-light);
-	line-height: var(--line-height-relaxed);
-	font-style: italic;
-	padding-left: var(--spacing-3);
-	border-left: 4px solid var(--interactive-accent);
-	margin: var(--spacing-3) 0;
-}
-
-/* Code blocks and inline code - common styles */
+/* Code blocks and inline code — font only */
 .cm-s-obsidian pre.HyperMD-codeblock,
 .HyperMD-codeblock-begin,
 .HyperMD-codeblock-end,
@@ -378,7 +362,7 @@
 	line-height: var(--line-height-relaxed);
 }
 
-/* Code blocks */
+/* Code blocks weight */
 .cm-s-obsidian pre.HyperMD-codeblock,
 .HyperMD-codeblock-begin,
 .HyperMD-codeblock-end,
@@ -388,160 +372,25 @@
 	font-weight: var(--font-weight-light);
 }
 
-/* Inline code */
+/* Inline code weight */
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view code {
 	font-weight: var(--font-weight-normal);
-	padding: var(--spacing-1) var(--spacing-2);
-	border-radius: var(--radius-2);
-	background-color: var(--background-modifier-border);
 }
 
-/* UI Elements Typography */
-
-/* Tab headers and buttons - common styles */
-.workspace-tab-header,
-.workspace-tab-header-inner,
-.button,
-.mod-cta {
-	font-family: var(--font-family-content);
-	font-size: var(--font-size-2);
-	font-weight: var(--font-weight-semibold);
-	line-height: var(--line-height-normal);
-	letter-spacing: 0.05em;
-}
-
-/* Modal titles */
-.modal .modal-title {
-	font-family: var(--font-family-headings);
-	font-size: var(--font-size-5);
-	font-weight: var(--font-weight-normal);
-	font-style: italic;
-	line-height: var(--line-height-tight);
-}
-
-/* Settings items */
-.setting-item.setting-item-heading {
-	border-bottom: 1px solid var(--background-modifier-border);
-}
-
-.setting-item .setting-item-name {
-	font-family: var(--font-family-headings);
-	font-size: var(--font-size-3);
-	font-weight: var(--font-weight-semibold);
-	font-style: italic;
-	line-height: var(--line-height-tight);
-	padding-top: var(--spacing-3);
-	padding-bottom: var(--spacing-1);
-}
-
-/* Common font-family for all UI text elements */
-.setting-item .setting-item-description,
-.view-header-title,
-.status-bar-item,
-.search-result-file-title,
-.search-result-file-match,
-.tooltip,
-.nav-file-title,
-.nav-folder-title {
-	font-family: var(--font-family-content);
-}
-
-/* Common light weight elements */
-.setting-item .setting-item-description,
-.status-bar-item,
-.search-result-file-match,
-.tooltip,
-.nav-file-title,
-.nav-folder-title {
-	font-weight: var(--font-weight-light);
-}
-
-/* Common normal line-height elements */
-.setting-item .setting-item-description,
-.status-bar-item,
-.search-result-file-title,
-.tooltip {
-	line-height: var(--line-height-normal);
-}
-
-/* Common relaxed line-height elements */
-.search-result-file-match,
-.nav-file-title,
-.nav-folder-title {
-	line-height: var(--line-height-relaxed);
-}
-
-/* Common font-size-1 elements */
-.status-bar-item,
-.tooltip {
-	font-size: var(--font-size-1);
-}
-
-/* Navigation and Search Matches */
-.search-result-file-match,
-.nav-file-title,
-.nav-folder-title {
-	font-size: var(--font-size-2);
-}
-
-/* Individual UI element styles */
-.setting-item .setting-item-description {
-	font-size: var(--font-size-3);
-	letter-spacing: var(--letter-spacing-content);
-	color: var(--text-muted);
-}
-
-/* View headers */
-.view-header-title {
-	font-size: var(--font-size-2);
-	font-weight: var(--font-weight-normal);
-	line-height: var(--line-height-tight);
-}
-
-/* Search results */
-.search-result-file-title {
-	font-size: var(--font-size-3);
-	font-weight: var(--font-weight-medium);
-}
-
-/* Editor */
+/* Editor list lines */
 .cm-line,
 [class^='cm-list-'].cm-line {
 	font-weight: var(--font-weight-normal);
 }
 
-/* Strong/bold text */
-.cm-strong,
-.cm-line .cm-strong,
-[class^='cm-list-'].cm-strong {
-	font-weight: var(--font-weight-bold);
-	color: var(--color-action);
-}
-
-/* ------------------------------
-   Editor Content Opacity
------------------------------- */
-
-/* Reduce opacity for all lines in the editor */
-.cm-editor .cm-content .cm-line {
-	transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
-	background: color-mix(in oklch, var(--color-ink-min) 0%, transparent);
-	box-decoration-break: clone;
-	-webkit-box-decoration-break: clone;
-	border-radius: var(--radius-1);
-	color: color-mix(in oklch, var(--text-normal) 84%, transparent);
-
-	&[class*='HyperMD-header-'] {
-		inline-size: max-content;
-		box-decoration-break: clone;
-		-webkit-box-decoration-break: clone;
-	}
-}
-
-/* Full opacity for the active line (where the caret is) */
-.cm-editor .cm-content .cm-active.cm-line,
-.cm-editor .cm-content .cm-activeLine {
-	background: color-mix(in oklch, var(--color-ink-min) 30%, transparent);
-	color: var(--text-normal);
+/* Blockquote font */
+.cm-quote,
+.HyperMD-quote,
+.markdown-preview-view blockquote {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-4);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-relaxed);
+	font-style: italic;
 }

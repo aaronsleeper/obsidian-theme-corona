@@ -21,21 +21,28 @@ body:not(.mod-rtl).mk-folder-lines .mk-tree-item:before {
 }
 
 /* Editor Line Numbers - Fix alignment for varying line heights */
-.markdown-source-view.mod-cm6 .cm-gutters {
-	.cm-lineNumbers .cm-gutterElement {
-		line-height: var(--line-height-normal);
-		min-height: calc(var(--font-size-3) * var(--line-height-normal));
-	}
-}
 
-.markdown-source-view.mod-cm6 .cm-content {
-	/* Ensure content lines use consistent baseline alignment */
-	.cm-line {
-		min-height: calc(var(--font-size-3) * var(--line-height-normal));
+.markdown-source-view.mod-cm6 .cm-gutters .cm-lineNumbers .cm-gutterElement {
+	/* Don't override CodeMirror's height - let it calculate based on content */
+	/* Just ensure the text inside aligns properly */
 
-		/* Headers override min-height with their own sizing */
-		&[class*="HyperMD-header"] {
-			min-height: unset;
-		}
-	}
+	/* Remove built-in padding that causes offset */
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 8px !important;
+
+	/* Ensure no extra margin */
+	margin: 0 !important;
+
+	/* Match line-height with content */
+	line-height: inherit !important;
+
+	/* Use flexbox to vertically center the number within the container */
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+
+	/* Keep box model consistent */
+	box-sizing: content-box !important;
 }

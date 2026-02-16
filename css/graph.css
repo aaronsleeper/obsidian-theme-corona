@@ -1,0 +1,38 @@
+/* ==================================
+   Graph View
+   ==================================
+   Graph canvas colors, node styling,
+   line colors, controls.
+   ================================== */
+
+.graph-view.color-fill {
+	color: var(--background-primary);
+}
+
+.graph-view.color-line {
+	color: var(--graph-line);
+}
+
+.graph-view.color-circle {
+	color: var(--graph-node);
+}
+
+.graph-view.color-fill-highlight {
+	color: var(--graph-node-focused);
+}
+
+.graph-view.color-fill-attachment {
+	color: var(--text-muted);
+}
+
+.graph-view.color-fill-tag {
+	color: var(--tag-color);
+}
+
+.graph-view.color-text {
+	color: var(--text-normal);
+}
+
+.graph-view.color-fill-unresolved {
+	color: var(--text-faint);
+}

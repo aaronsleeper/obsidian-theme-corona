@@ -1,13 +1,9 @@
 {
-	"name": "sample-obsidian-theme",
+	"name": "corona-obsidian-theme",
 	"version": "1.0.0",
 	"scripts": {
 		"version": "node version-bump.mjs && git add manifest.json versions.json",
-		"build:scss": "sass scss/main.scss theme.css --style=compressed",
-		"watch:scss": "sass scss/main.scss theme.css --watch --style=compressed",
-		"dev": "npm run watch:scss"
-	},
-	"devDependencies": {
-		"sass": "^1.69.0"
+		"build": "node build.mjs --copy",
+		"dev": "fswatch -o css/ | xargs -n1 -I{} node build.mjs --copy"
 	}
 }

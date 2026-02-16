@@ -1,1 +1,1628 @@
-@import"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap";@import"https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap";@import"https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap";:root{--font-playfair: 'Playfair Display', serif;--font-family-content: 'Inter', sans-serif;--font-family-headings: 'Playfair Display', serif;--font-family-monospace: 'Source Code Pro', monospace;font-synthesis:none;font-feature-settings:normal;font-optical-sizing:auto;--font-size-1: 0.75rem;--font-size-2: 0.875rem;--font-size-3: 1rem;--font-size-4: 1.125rem;--font-size-5: 1.25rem;--font-size-6: 1.5rem;--font-size-7: 1.875rem;--font-size-8: 2.25rem;--font-size-9: 3rem;--font-size-10: 3.75rem;--font-weight-light: 200;--font-weight-normal: 400;--font-weight-medium: 500;--font-weight-semibold: 600;--font-weight-bold: 700;--font-weight-extrabold: 800;--font-weight-black: 900;--font-var-light: 'wght' 300;--font-var-normal: 'wght' 400;--font-var-medium: 'wght' 500;--font-var-semibold: 'wght' 600;--font-var-bold: 'wght' 700;--font-var-extrabold: 'wght' 800;--line-height-tight: 1.25;--line-height-normal: 1.5;--line-height-relaxed: 1.75;--letter-spacing-heading: 0.033em;--letter-spacing-content: 0.01em;--spacing-1: 0.25rem;--spacing-2: 0.5rem;--spacing-3: 1rem;--spacing-4: 1.5rem;--spacing-5: 2rem;--spacing-6: 3rem;--spacing-7: 4rem;--radius-1: 0.125rem;--radius-2: 0.375rem;--radius-3: 0.5rem;--radius-4: 0.75rem;--radius-5: 1rem;--breakpoint-sm: 640px;--breakpoint-md: 768px;--breakpoint-lg: 1024px;--breakpoint-xl: 1280px;--breakpoint-2xl: 1536px;--z-dropdown: 1000;--z-sticky: 1020;--z-fixed: 1030;--z-modal-backdrop: 1040;--z-modal: 1050;--z-popover: 1060;--z-tooltip: 1070}body{--font-interface: var(--font-family-content);--font-text: var(--font-family-content);--font-monospace: var(--font-family-monospace);--font-interface-theme: var(--font-family-content);--font-text-theme: var(--font-family-content);--font-monospace-theme: var(--font-family-monospace)}:root{--color-green-min: oklch(0.98 0.05 160);--color-green-mid: oklch(0.65 0.2 160);--color-green-max: oklch(0.2 0.08 160);--color-blue-min: oklch(0.95 0.08 220);--color-blue-mid: oklch(0.5 0.28 220);--color-blue-max: oklch(0.2 0.15 220);--color-violet-min: oklch(0.95 0.05 280);--color-violet-mid: oklch(0.5 0.24 280);--color-violet-max: oklch(0.2 0.12 280);--color-purple-min: oklch(0.95 0.05 300);--color-purple-mid: oklch(0.5 0.24 300);--color-purple-max: oklch(0.2 0.12 300);--color-pink-min: oklch(0.95 0.05 340);--color-pink-mid: oklch(0.5 0.24 340);--color-pink-max: oklch(0.2 0.12 340);--color-red-min: oklch(0.95 0.05 20);--color-red-mid: oklch(0.5 0.24 20);--color-red-max: oklch(0.2 0.12 20);--color-orange-min: oklch(0.95 0.05 60);--color-orange-mid: oklch(0.5 0.24 60);--color-orange-max: oklch(0.2 0.12 60);--color-yellow-min: oklch(0.95 0.05 100);--color-yellow-mid: oklch(0.5 0.24 100);--color-yellow-max: oklch(0.2 0.12 100);--color-light-gray-min: oklch(0.98 0.002 240);--color-light-gray-mid: oklch(0.81 0.009 240);--color-light-gray-max: oklch(0.54 0.018 240);--color-dark-gray-min: oklch(0.38 0.004 240);--color-dark-gray-mid: oklch(0.245 0.004 240);--color-dark-gray-max: oklch(0.11 0.004 240);--color-ink-min: oklch(0.28 0.08 280);--color-ink-mid: oklch(0.18 0.08 280);--color-ink-max: oklch(0.1 0.08 280);--color-black: oklch(0 0 0);--color-white: oklch(1 0 0)}body{--color-red: var(--color-red-mid);--color-red-rgb: color-mix(in srgb, var(--color-red) 100%, transparent);--color-orange: var(--color-orange-mid);--color-orange-rgb: color-mix(in srgb, var(--color-orange) 100%, transparent);--color-yellow: var(--color-yellow-mid);--color-yellow-rgb: color-mix(in srgb, var(--color-yellow) 100%, transparent);--color-green: var(--color-green-mid);--color-green-rgb: color-mix(in srgb, var(--color-green) 100%, transparent);--color-blue: var(--color-blue-mid);--color-blue-rgb: color-mix(in srgb, var(--color-blue) 100%, transparent);--color-purple: var(--color-purple-mid);--color-purple-rgb: color-mix(in srgb, var(--color-purple) 100%, transparent)}.theme-light{--color-action: var(--color-blue-mid);--color-info: var(--color-purple-mid);--color-success: var(--color-green-mid);--color-warning: var(--color-yellow-mid);--color-critical: var(--color-red-mid);--color-neutral: var(--color-dark-gray-min);--color-background-primary: var(--color-white);--color-background-secondary: var(--color-light-gray-min);--color-background-tertiary: oklch(from var(--color-light-gray-min) calc(l - 0.3) c h);--color-text-primary: var(--color-dark-gray-max);--color-text-secondary: color-mix(in oklch, var(--color-dark-gray-max) 40%, transparent);--color-text-tertiary: color-mix(in oklch, var(--color-dark-gray-max) 60%, transparent);--color-text-inverse: var(--color-light-gray-min);--color-border-primary: color-mix(in oklch, var(--color-ligh-gray-min) 60%, var(--color-ligh-gray-mid));--color-border-secondary: color-mix(in oklch, var(--color-ligh-gray-min) 60%, var(--color-ligh-gray-mid));--color-border-focus: var(--color-action);--text-normal: var(--color-dark-gray-max);--text-muted: var(--color-dark-gray-mid);--text-faint: var(--color-dark-gray-min);--text-error: var(--color-red-max);--text-success: var(--color-green-max);--text-warning: var(--color-yellow-max);--text-on-accent: var(--color-light-gray-min);--text-on-accent-inverted: var(--color-dark-gray-max);--background-primary: var(--color-light-gray-min);--background-primary-alt: color-mix(in oklch, var(--color-ligh-gray-min) 60%, var(--color-ligh-gray-mid));--background-secondary: var(--color-dark-gray-max);--background-secondary-alt: var(--color-dark-gray-max);--background-modifier-border: var(--color-dark-gray-max);--background-modifier-form-field: var(--color-dark-gray-max);--background-modifier-form-field-highlighted: var(--color-dark-gray-max);--background-modifier-box-shadow: var(--color-dark-gray-max);--background-modifier-success: var(--color-dark-gray-max);--background-modifier-error: var(--color-dark-gray-max);--background-modifier-error-rgb: var(--color-dark-gray-max);--background-modifier-cover: var(--color-dark-gray-max);--interactive-normal: var(--color-dark-gray-max);--interactive-hover: var(--color-dark-gray-max);--interactive-accent: var(--color-dark-gray-max);--interactive-accent-rgb: var(--color-dark-gray-max);--interactive-accent-hover: var(--color-dark-gray-max);--interactive-success: var(--color-dark-gray-max);--titlebar-background: var(--color-dark-gray-max);--titlebar-background-focused: var(--color-dark-gray-max);--ribbon-background: var(--color-dark-gray-max);--ribbon-background-collapsed: var(--color-dark-gray-max);--tab-background-active: var(--color-dark-gray-max);--tab-text-color-active: var(--color-dark-gray-max);--tab-text-color-focused-active: var(--color-dark-gray-max);--scrollbar-bg: var(--color-dark-gray-max);--scrollbar-thumb-bg: var(--color-dark-gray-max);--scrollbar-active-thumb-bg: var(--color-dark-gray-max)}.theme-dark{--color-base-00: var(--color-ink-min);--color-base-05: color-mix(in oklch, var(--color-ink-min) 10%, var(--color-ink-mid));--color-base-10: color-mix(in oklch, var(--color-ink-min) 20%, var(--color-ink-mid));--color-base-20: color-mix(in oklch, var(--color-ink-min) 40%, var(--color-ink-mid));--color-base-25: color-mix(in oklch, var(--color-ink-min) 50%, var(--color-ink-mid));--color-base-30: color-mix(in oklch, var(--color-ink-min) 60%, var(--color-ink-mid));--color-base-35: color-mix(in oklch, var(--color-ink-min) 70%, var(--color-ink-mid));--color-base-40: color-mix(in oklch, var(--color-ink-min) 80%, var(--color-ink-mid));--color-base-50: var(--color-ink-mid);--color-base-60: color-mix(in oklch, var(--color-ink-mid) 30%, var(--color-ink-max));--color-base-70: color-mix(in oklch, var(--color-ink-mid) 35%, var(--color-ink-max));--color-base-100: var(--color-ink-max);--text-normal: var(--color-light-gray-min);--text-muted: color-mix(in oklch, var(--color-light-gray-min) 60%, transparent);--text-faint: color-mix(in oklch, var(--color-light-gray-min) 40%, transparent);--text-error: var(--color-red-min);--text-success: var(--color-green-min);--text-warning: var(--color-yellow-min);--text-on-accent: var(--text-muted);--text-on-accent-inverted: var(--color-dark-gray-min);--text-accent: color-mix(in oklch, var(--color-pink-mid) 50%, var(--color-pink-min));--text-accent-hover: oklch(from var(--text-accent) calc(l + 0.15) c h);--text-selection: var(--color-pink-mid);--text-highlight-bg: var(--color-pink-mid);--caret-color: var(--color-pink-mid);--background-primary: var(--color-base-60)}:root{--h1-font: var(--font-family-headings);--h2-font: var(--font-family-headings);--h3-font: var(--font-family-headings);--inline-title-font: var(--font-family-headings)}.heading-1,.heading-2,.heading-3,.heading-4,.heading-5,.heading-6{font-family:var(--font-family-headings);font-style:italic;line-height:var(--line-height-tight);letter-spacing:var(--letter-spacing-heading)}.heading-1{font-size:var(--font-size-8);font-weight:var(--font-weight-medium)}.heading-2{font-size:var(--font-size-7);font-weight:var(--font-weight-medium)}.heading-3{font-size:var(--font-size-6);font-weight:var(--font-weight-black)}.heading-4,.heading-5{font-weight:var(--font-weight-semibold)}.heading-4{font-size:var(--font-size-5)}.heading-5{font-size:var(--font-size-4)}.heading-6{font-size:var(--font-size-3);font-weight:var(--font-weight-semibold)}.body-large,.body-base,.body-small,.caption{font-family:var(--font-family-content);font-weight:var(--font-weight-light);letter-spacing:var(--letter-spacing-content)}.body-base,.body-small,.caption,.label{line-height:var(--line-height-normal)}.body-large{font-size:var(--font-size-4);line-height:var(--line-height-relaxed)}.body-base{font-size:var(--font-size-3)}.body-small,.label{font-size:var(--font-size-2)}.caption{font-size:var(--font-size-1)}.label{font-family:var(--font-family-content);font-weight:var(--font-weight-semibold);letter-spacing:var(--letter-spacing-content)}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,.markdown-preview-view h1,.HyperMD-header-1.cm-line,.inline-title.cm-line h1,.HyperMD-list-line.cm-line .cm-header-1,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h2,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-2,.markdown-preview-view h2,.HyperMD-header-2.cm-line,.inline-title.cm-line h2,.HyperMD-list-line.cm-line .cm-header-2,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h3,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-3,.markdown-preview-view h3,.HyperMD-header-3.cm-line,.inline-title.cm-line h3,.HyperMD-list-line.cm-line .cm-header-3,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,.markdown-preview-view h4,.HyperMD-header-4.cm-line,.inline-title.cm-line h4,.HyperMD-list-line.cm-line .cm-header-4,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h5,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-5,.markdown-preview-view h5,.HyperMD-header-5.cm-line,.inline-title.cm-line h5,.HyperMD-list-line.cm-line .cm-header-5,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-6.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h6,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-6,.markdown-preview-view h6,.HyperMD-header-6.cm-line,.inline-title.cm-line h6,.HyperMD-list-line.cm-line .cm-header-6{font-family:var(--font-family-headings);line-height:var(--line-height-tight);letter-spacing:var(--letter-spacing-heading);margin-top:var(--spacing-3) !important;margin-bottom:var(--spacing-1) !important}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,.markdown-preview-view h1,.HyperMD-header-1.cm-line,.inline-title.cm-line h1,.HyperMD-list-line.cm-line .cm-header-1,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h2,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-2,.markdown-preview-view h2,.HyperMD-header-2.cm-line,.inline-title.cm-line h2,.HyperMD-list-line.cm-line .cm-header-2,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h3,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-3,.markdown-preview-view h3,.HyperMD-header-3.cm-line,.inline-title.cm-line h3,.HyperMD-list-line.cm-line .cm-header-3,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,.markdown-preview-view h4,.HyperMD-header-4.cm-line,.inline-title.cm-line h4,.HyperMD-list-line.cm-line .cm-header-4,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h5,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-5,.markdown-preview-view h5,.HyperMD-header-5.cm-line,.inline-title.cm-line h5,.HyperMD-list-line.cm-line .cm-header-5{font-style:italic}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,.markdown-preview-view h1,.HyperMD-header-1.cm-line,.inline-title.cm-line h1,.HyperMD-list-line.cm-line .cm-header-1,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h2,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-2,.markdown-preview-view h2,.HyperMD-header-2.cm-line,.inline-title.cm-line h2,.HyperMD-list-line.cm-line .cm-header-2,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h3,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-3,.markdown-preview-view h3,.HyperMD-header-3.cm-line,.inline-title.cm-line h3,.HyperMD-list-line.cm-line .cm-header-3{font-weight:var(--font-weight-black)}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,.markdown-preview-view h4,.HyperMD-header-4.cm-line,.inline-title.cm-line h4,.HyperMD-list-line.cm-line .cm-header-4,.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h5,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-5,.markdown-preview-view h5,.HyperMD-header-5.cm-line,.inline-title.cm-line h5,.HyperMD-list-line.cm-line .cm-header-5{font-weight:var(--font-weight-normal)}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,.markdown-preview-view h1,.HyperMD-header-1.cm-line,.inline-title.cm-line h1,.HyperMD-list-line.cm-line .cm-header-1{font-size:var(--font-size-8)}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h2,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-2,.markdown-preview-view h2,.HyperMD-header-2.cm-line,.inline-title.cm-line h2,.HyperMD-list-line.cm-line .cm-header-2{font-size:var(--font-size-7)}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h3,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-3,.markdown-preview-view h3,.HyperMD-header-3.cm-line,.inline-title.cm-line h3,.HyperMD-list-line.cm-line .cm-header-3{font-size:var(--font-size-6)}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,.markdown-preview-view h4,.HyperMD-header-4.cm-line,.inline-title.cm-line h4,.HyperMD-list-line.cm-line .cm-header-4{font-size:var(--font-size-5)}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h5,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-5,.markdown-preview-view h5,.HyperMD-header-5.cm-line,.inline-title.cm-line h5,.HyperMD-list-line.cm-line .cm-header-5{font-size:var(--font-size-4)}.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-6.cm-line,.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h6,.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-6,.markdown-preview-view h6,.HyperMD-header-6.cm-line,.inline-title.cm-line h6,.HyperMD-list-line.cm-line .cm-header-6{font-size:var(--font-size-3);font-weight:var(--font-weight-semibold)}.cm-content,.cm-line,.markdown-preview-view p,.markdown-preview-section,.cm-list-1,.cm-list-2,.cm-list-3,.markdown-preview-view ul,.markdown-preview-view ol,.markdown-preview-view li{font-family:var(--font-family-content);font-size:var(--font-size-3);font-weight:var(--font-weight-light);line-height:var(--line-height-normal);letter-spacing:var(--letter-spacing-content)}.cm-quote,.HyperMD-quote,.markdown-preview-view blockquote{font-family:var(--font-family-content);font-size:var(--font-size-4);font-weight:var(--font-weight-light);line-height:var(--line-height-relaxed);font-style:italic;padding-left:var(--spacing-3);border-left:4px solid var(--interactive-accent);margin:var(--spacing-3) 0}.cm-s-obsidian pre.HyperMD-codeblock,.HyperMD-codeblock-begin,.HyperMD-codeblock-end,.cm-line.HyperMD-codeblock,.markdown-preview-section pre,.markdown-preview-view pre,.cm-s-obsidian span.cm-inline-code,.markdown-preview-view code{font-family:var(--font-family-monospace);font-size:var(--font-size-2);line-height:var(--line-height-relaxed)}.cm-s-obsidian pre.HyperMD-codeblock,.HyperMD-codeblock-begin,.HyperMD-codeblock-end,.cm-line.HyperMD-codeblock,.markdown-preview-section pre,.markdown-preview-view pre{font-weight:var(--font-weight-light)}.cm-s-obsidian span.cm-inline-code,.markdown-preview-view code{font-weight:var(--font-weight-normal);padding:var(--spacing-1) var(--spacing-2);border-radius:var(--radius-2);background-color:var(--background-modifier-border)}.workspace-tab-header,.workspace-tab-header-inner,.button,.mod-cta{font-family:var(--font-family-content);font-size:var(--font-size-2);font-weight:var(--font-weight-semibold);line-height:var(--line-height-normal);letter-spacing:.05em}.modal .modal-title{font-family:var(--font-family-headings);font-size:var(--font-size-5);font-weight:var(--font-weight-normal);font-style:italic;line-height:var(--line-height-tight)}.setting-item.setting-item-heading{border-bottom:1px solid var(--background-modifier-border)}.setting-item .setting-item-name{font-family:var(--font-family-headings);font-size:var(--font-size-3);font-weight:var(--font-weight-semibold);font-style:italic;line-height:var(--line-height-tight);padding-top:var(--spacing-3);padding-bottom:var(--spacing-1)}.setting-item .setting-item-description,.view-header-title,.status-bar-item,.search-result-file-title,.search-result-file-match,.tooltip,.nav-file-title,.nav-folder-title{font-family:var(--font-family-content)}.setting-item .setting-item-description,.status-bar-item,.search-result-file-match,.tooltip,.nav-file-title,.nav-folder-title{font-weight:var(--font-weight-light)}.setting-item .setting-item-description,.status-bar-item,.search-result-file-title,.tooltip{line-height:var(--line-height-normal)}.search-result-file-match,.nav-file-title,.nav-folder-title{line-height:var(--line-height-relaxed)}.status-bar-item,.tooltip{font-size:var(--font-size-1)}.search-result-file-match,.nav-file-title,.nav-folder-title{font-size:var(--font-size-4)}.setting-item .setting-item-description{font-size:var(--font-size-3);letter-spacing:var(--letter-spacing-content);color:var(--text-muted)}.view-header-title{font-size:var(--font-size-2);font-weight:var(--font-weight-normal);line-height:var(--line-height-tight)}.search-result-file-title{font-size:var(--font-size-3);font-weight:var(--font-weight-medium)}.cm-line,[class^=cm-list-].cm-line{font-weight:var(--font-weight-normal)}.cm-strong,.cm-line .cm-strong,[class^=cm-list-].cm-strong{font-weight:var(--font-weight-bold);color:var(--color-action)}.cm-editor .cm-content .cm-line{transition:color .3s ease-in-out,background .3s ease-in-out;background:color-mix(in oklch, var(--color-ink-min) 0%, transparent);box-decoration-break:clone;-webkit-box-decoration-break:clone;border-radius:var(--radius-1);color:color-mix(in oklch, var(--text-normal) 84%, transparent)}.cm-editor .cm-content .cm-line[class*=HyperMD-header-]{inline-size:max-content;box-decoration-break:clone;-webkit-box-decoration-break:clone}.cm-editor .cm-content .cm-active.cm-line,.cm-editor .cm-content .cm-activeLine{background:color-mix(in oklch, var(--color-ink-min) 30%, transparent);color:var(--text-normal)}@keyframes caret-rainbow-pulse{0%{--caret-color: color-mix(in oklch, var(--color-red-mid) 50%, var(--color-red-min));--caret-opacity: 0.9}0.5%{--caret-opacity: 0.3}1%{--caret-opacity: 0.9}1.5%{--caret-opacity: 0.3}2%{--caret-opacity: 0.9}14.28%{--caret-color: color-mix(in oklch, var(--color-orange-mid) 50%, var(--color-orange-min));--caret-opacity: 0.9}14.78%{--caret-opacity: 0.3}15.28%{--caret-opacity: 0.9}15.78%{--caret-opacity: 0.3}16.28%{--caret-opacity: 0.9}28.56%{--caret-color: color-mix(in oklch, var(--color-yellow-mid) 50%, var(--color-yellow-min));--caret-opacity: 0.9}29.06%{--caret-opacity: 0.3}29.56%{--caret-opacity: 0.9}30.06%{--caret-opacity: 0.3}30.56%{--caret-opacity: 0.9}42.84%{--caret-color: color-mix(in oklch, var(--color-green-mid) 50%, var(--color-green-min));--caret-opacity: 0.9}43.34%{--caret-opacity: 0.3}43.84%{--caret-opacity: 0.9}44.34%{--caret-opacity: 0.3}44.84%{--caret-opacity: 0.9}57.12%{--caret-color: color-mix(in oklch, var(--color-blue-mid) 50%, var(--color-blue-min));--caret-opacity: 0.9}57.62%{--caret-opacity: 0.3}58.12%{--caret-opacity: 0.9}58.62%{--caret-opacity: 0.3}59.12%{--caret-opacity: 0.9}71.4%{--caret-color: color-mix(in oklch, var(--color-violet-mid) 50%, var(--color-violet-min));--caret-opacity: 0.9}71.9%{--caret-opacity: 0.3}72.4%{--caret-opacity: 0.9}72.9%{--caret-opacity: 0.3}73.4%{--caret-opacity: 0.9}85.68%{--caret-color: color-mix(in oklch, var(--color-purple-mid) 50%, var(--color-purple-min));--caret-opacity: 0.9}86.18%{--caret-opacity: 0.3}86.68%{--caret-opacity: 0.9}87.18%{--caret-opacity: 0.3}87.68%{--caret-opacity: 0.9}100%{--caret-color: color-mix(in oklch, var(--color-red-mid) 50%, var(--color-red-min));--caret-opacity: 0.9}}body{--caret-color: var(--color-green-mid);--caret-opacity: 0.9;animation:caret-rainbow-pulse 10s ease-in-out infinite}@keyframes caret-bounce{0%,100%{transform:translateY(0) scaleY(1)}50%{transform:translateY(-2px) scaleY(0.95)}}.cm-editor .cm-content{caret-color:var(--caret-color)}input,textarea{caret-color:var(--caret-color)}.notice{position:relative;overflow:hidden;padding-left:calc(8px + var(--spacing-3))}.notice::before{content:"";position:absolute;left:0;top:0;width:8px;height:100%;background-color:var(--color-pink-mid)}body:not(.mod-rtl).mk-folder-lines .mk-tree-item:before{left:10px}.markdown-source-view.mod-cm6 .cm-gutters .cm-lineNumbers .cm-gutterElement{line-height:var(--line-height-normal);min-height:calc(var(--font-size-3)*var(--line-height-normal))}.markdown-source-view.mod-cm6 .cm-content .cm-line{min-height:calc(var(--font-size-3)*var(--line-height-normal))}.markdown-source-view.mod-cm6 .cm-content .cm-line[class*=HyperMD-header]{min-height:unset}/*# sourceMappingURL=theme.css.map */
+/* Corona Theme — Built output. Do not edit directly. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ==================================
+   Variables — Foundation Tokens
+   ==================================
+   Core design tokens that all other files reference.
+   Includes typography scale, spacing, radii, z-index,
+   breakpoints, and Obsidian font variable mappings.
+   ================================== */
+
+:root {
+	/* Font Options for Testing */
+	--font-playfair: 'Playfair Display', serif;
+
+	/* Font Variables */
+	--font-family-content: 'Inter', sans-serif;
+	--font-family-headings: 'Playfair Display', serif;
+	--font-family-monospace: 'Source Code Pro', monospace;
+
+	/* Variable Font Settings for Playfair Display */
+	/* Following Google Fonts guidance for variable fonts */
+	font-synthesis: none; /* Prevent browser from synthesizing bold/italic */
+	font-feature-settings: normal;
+	font-optical-sizing: auto; /* Automatically adjust optical size based on font-size */
+
+	/* Typography Scale */
+	--font-size-1: 0.75rem; /* 12px */
+	--font-size-2: 0.875rem; /* 14px */
+	--font-size-3: 1rem; /* 16px */
+	--font-size-4: 1.125rem; /* 18px */
+	--font-size-5: 1.25rem; /* 20px */
+	--font-size-6: 1.5rem; /* 24px */
+	--font-size-7: 1.875rem; /* 30px */
+	--font-size-8: 2.25rem; /* 36px */
+	--font-size-9: 3rem; /* 48px */
+	--font-size-10: 3.75rem; /* 60px */
+
+	/* Font Weights */
+	--font-weight-light: 200;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	--font-weight-extrabold: 800;
+	--font-weight-black: 900;
+
+	/* Variable Font Settings (for fonts that support font-variation-settings) */
+	--font-var-light: 'wght' 300;
+	--font-var-normal: 'wght' 400;
+	--font-var-medium: 'wght' 500;
+	--font-var-semibold: 'wght' 600;
+	--font-var-bold: 'wght' 700;
+	--font-var-extrabold: 'wght' 800;
+
+	/* Line Heights */
+	--line-height-tight: 1.25;
+	--line-height-normal: 1.5;
+	--line-height-relaxed: 1.75;
+
+	/* Letter Spacing */
+	--letter-spacing-heading: 0.033em;
+	--letter-spacing-content: 0.01em;
+	--letter-spacing-ui: 0.05em;
+
+	/* Spacing Scale */
+	--spacing-1: 0.25rem; /* 4px */
+	--spacing-2: 0.5rem; /* 8px */
+	--spacing-3: 1rem; /* 16px */
+	--spacing-4: 1.5rem; /* 24px */
+	--spacing-5: 2rem; /* 32px */
+	--spacing-6: 3rem; /* 48px */
+	--spacing-7: 4rem; /* 64px */
+
+	/* Border Radius */
+	--radius-1: 0.125rem; /* 2px */
+	--radius-2: 0.375rem; /* 6px */
+	--radius-3: 0.5rem; /* 8px */
+	--radius-4: 0.75rem; /* 12px */
+	--radius-5: 1rem; /* 16px */
+
+	/* Border Widths */
+	--border-width-thin: 1px;
+	--border-width-medium: 2px;
+	--border-width-thick: 4px;
+
+	/* Accent Bar */
+	--accent-bar-width: 8px;
+
+	/* Transitions */
+	--transition-fast: 150ms;
+	--transition-normal: 300ms;
+	--transition-slow: 500ms;
+	--ease-default: ease-in-out;
+
+	/* Opacity */
+	--opacity-muted: 0.84;
+	--opacity-faint: 0.6;
+	--opacity-ghost: 0.4;
+
+	/* Breakpoints */
+	--breakpoint-sm: 640px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-2xl: 1536px;
+
+	/* Z-Index Scale */
+	--z-dropdown: 1000;
+	--z-sticky: 1020;
+	--z-fixed: 1030;
+	--z-modal-backdrop: 1040;
+	--z-modal: 1050;
+	--z-popover: 1060;
+	--z-tooltip: 1070;
+}
+
+/* Obsidian Standard CSS Variables */
+body {
+	/* Primary font variables that Obsidian uses */
+	--font-interface: var(--font-family-content);
+	--font-text: var(--font-family-content);
+	--font-monospace: var(--font-family-monospace);
+
+	/* Theme-specific aliases for compatibility */
+	--font-interface-theme: var(--font-family-content);
+	--font-text-theme: var(--font-family-content);
+	--font-monospace-theme: var(--font-family-monospace);
+
+	/* Heading sizes mapped to typography scale */
+	--h1-size: var(--font-size-8);
+	--h2-size: var(--font-size-7);
+	--h3-size: var(--font-size-6);
+	--h4-size: var(--font-size-5);
+	--h5-size: var(--font-size-4);
+	--h6-size: var(--font-size-3);
+}
+
+/* ==================================
+   Color Choices — Base Palettes
+   ==================================
+   Raw color definitions using OKLch color space.
+   Each hue has three stops: min (lightest),
+   mid (medium), max (darkest).
+   ================================== */
+
+:root {
+	/* Green Color Palette */
+	--color-green-min: oklch(0.98 0.05 160);
+	--color-green-mid: oklch(0.65 0.2 160);
+	--color-green-max: oklch(0.2 0.08 160);
+
+	/* Blue Color Palette */
+	--color-blue-min: oklch(0.95 0.08 220);
+	--color-blue-mid: oklch(0.5 0.28 220);
+	--color-blue-max: oklch(0.2 0.15 220);
+
+	/* Violet Color Palette */
+	--color-violet-min: oklch(0.95 0.05 280);
+	--color-violet-mid: oklch(0.5 0.24 280);
+	--color-violet-max: oklch(0.2 0.12 280);
+
+	/* Purple Color Palette */
+	--color-purple-min: oklch(0.95 0.05 300);
+	--color-purple-mid: oklch(0.5 0.24 300);
+	--color-purple-max: oklch(0.2 0.12 300);
+
+	/* Pink Color Palette */
+	--color-pink-min: oklch(0.95 0.05 340);
+	--color-pink-mid: oklch(0.5 0.24 340);
+	--color-pink-max: oklch(0.2 0.12 340);
+
+	/* Red Color Palette */
+	--color-red-min: oklch(0.95 0.05 20);
+	--color-red-mid: oklch(0.5 0.24 20);
+	--color-red-max: oklch(0.2 0.12 20);
+
+	/* Orange Color Palette */
+	--color-orange-min: oklch(0.95 0.05 60);
+	--color-orange-mid: oklch(0.5 0.24 60);
+	--color-orange-max: oklch(0.2 0.12 60);
+
+	/* Yellow Color Palette */
+	--color-yellow-min: oklch(0.95 0.05 100);
+	--color-yellow-mid: oklch(0.5 0.24 100);
+	--color-yellow-max: oklch(0.2 0.12 100);
+
+	/* Light Gray Color Palette */
+	--color-light-gray-min: oklch(0.98 0.002 240);
+	--color-light-gray-mid: oklch(0.81 0.009 240);
+	--color-light-gray-max: oklch(0.54 0.018 240);
+
+	/* Dark Gray Color Palette */
+	--color-dark-gray-min: oklch(0.38 0.004 240);
+	--color-dark-gray-mid: oklch(0.245 0.004 240);
+	--color-dark-gray-max: oklch(0.11 0.004 240);
+
+	/* Ink Color Palette */
+	--color-ink-min: oklch(0.28 0.08 280);
+	--color-ink-mid: oklch(0.18 0.08 280);
+	--color-ink-max: oklch(0.1 0.08 280);
+
+	/* Utility Colors */
+	--color-black: oklch(0 0 0);
+	--color-white: oklch(1 0 0);
+}
+
+/* Extended color aliases */
+body {
+	--color-red: var(--color-red-mid);
+	--color-red-rgb: color-mix(in srgb, var(--color-red) 100%, transparent);
+	--color-orange: var(--color-orange-mid);
+	--color-orange-rgb: color-mix(in srgb, var(--color-orange) 100%, transparent);
+	--color-yellow: var(--color-yellow-mid);
+	--color-yellow-rgb: color-mix(in srgb, var(--color-yellow) 100%, transparent);
+	--color-green: var(--color-green-mid);
+	--color-green-rgb: color-mix(in srgb, var(--color-green) 100%, transparent);
+	--color-blue: var(--color-blue-mid);
+	--color-blue-rgb: color-mix(in srgb, var(--color-blue) 100%, transparent);
+	--color-purple: var(--color-purple-mid);
+	--color-purple-rgb: color-mix(in srgb, var(--color-purple) 100%, transparent);
+}
+
+/* ==================================
+   Color Decisions — Light Theme
+   ==================================
+   Semantic color assignments for .theme-light.
+   Maps base palette tokens to Obsidian's
+   standard CSS variables.
+   ================================== */
+
+.theme-light {
+	/* Base color scale */
+	--color-base-00: var(--color-white);
+	--color-base-05: color-mix(in oklch, var(--color-white) 90%, var(--color-light-gray-min));
+	--color-base-10: var(--color-light-gray-min);
+	--color-base-20: color-mix(in oklch, var(--color-light-gray-min) 70%, var(--color-light-gray-mid));
+	--color-base-25: color-mix(in oklch, var(--color-light-gray-min) 50%, var(--color-light-gray-mid));
+	--color-base-30: var(--color-light-gray-mid);
+	--color-base-35: color-mix(in oklch, var(--color-light-gray-mid) 70%, var(--color-light-gray-max));
+	--color-base-40: color-mix(in oklch, var(--color-light-gray-mid) 50%, var(--color-light-gray-max));
+	--color-base-50: var(--color-light-gray-max);
+	--color-base-60: var(--color-dark-gray-min);
+	--color-base-70: var(--color-dark-gray-mid);
+	--color-base-100: var(--color-dark-gray-max);
+
+	/* Semantic colors */
+	--color-action: var(--color-blue-mid);
+	--color-info: var(--color-purple-mid);
+	--color-success: var(--color-green-mid);
+	--color-warning: var(--color-yellow-mid);
+	--color-critical: var(--color-red-mid);
+	--color-neutral: var(--color-dark-gray-min);
+
+	/* Accent (HSL for Obsidian compatibility — approximation of pink-mid) */
+	--accent-h: 340;
+	--accent-s: 60%;
+	--accent-l: 50%;
+
+	/* Text colors */
+	--text-normal: var(--color-dark-gray-max);
+	--text-muted: var(--color-dark-gray-mid);
+	--text-faint: var(--color-dark-gray-min);
+	--text-error: var(--color-red-max);
+	--text-success: var(--color-green-max);
+	--text-warning: var(--color-yellow-max);
+	--text-on-accent: var(--color-light-gray-min);
+	--text-on-accent-inverted: var(--color-dark-gray-max);
+	--text-accent: var(--color-pink-mid);
+	--text-accent-hover: oklch(from var(--color-pink-mid) calc(l - 0.1) c h);
+	--text-selection: color-mix(in oklch, var(--color-pink-mid) 30%, transparent);
+	--text-highlight-bg: color-mix(in oklch, var(--color-yellow-mid) 30%, transparent);
+
+	/* Primary backgrounds */
+	--background-primary: var(--color-white);
+	--background-primary-alt: var(--color-light-gray-min);
+	--background-secondary: color-mix(in oklch, var(--color-light-gray-min) 50%, var(--color-light-gray-mid));
+	--background-secondary-alt: var(--color-light-gray-mid);
+
+	/* Modifier backgrounds */
+	--background-modifier-border: color-mix(in oklch, var(--color-light-gray-min) 40%, var(--color-light-gray-mid));
+	--background-modifier-form-field: var(--color-white);
+	--background-modifier-form-field-highlighted: var(--color-light-gray-min);
+	--background-modifier-box-shadow: color-mix(in oklch, var(--color-dark-gray-max) 10%, transparent);
+	--background-modifier-success: color-mix(in oklch, var(--color-green-min) 50%, var(--color-white));
+	--background-modifier-error: color-mix(in oklch, var(--color-red-min) 50%, var(--color-white));
+	--background-modifier-error-rgb: color-mix(in srgb, var(--color-red-min) 50%, var(--color-white));
+	--background-modifier-cover: color-mix(in oklch, var(--color-dark-gray-max) 60%, transparent);
+
+	/* Interactive elements */
+	--interactive-normal: var(--color-light-gray-min);
+	--interactive-hover: color-mix(in oklch, var(--color-light-gray-min) 50%, var(--color-light-gray-mid));
+	--interactive-accent: var(--color-pink-mid);
+	--interactive-accent-rgb: color-mix(in srgb, var(--color-pink-mid) 100%, transparent);
+	--interactive-accent-hover: oklch(from var(--color-pink-mid) calc(l - 0.08) c h);
+	--interactive-success: var(--color-green-mid);
+
+	/* UI chrome */
+	--titlebar-background: var(--color-light-gray-min);
+	--titlebar-background-focused: var(--color-white);
+	--ribbon-background: color-mix(in oklch, var(--color-light-gray-min) 40%, var(--color-light-gray-mid));
+	--ribbon-background-collapsed: var(--color-light-gray-min);
+	--tab-background-active: var(--color-white);
+	--tab-text-color-active: var(--color-dark-gray-max);
+	--tab-text-color-focused-active: var(--color-dark-gray-max);
+
+	/* Navigation */
+	--nav-item-color: var(--color-dark-gray-mid);
+	--nav-item-background-hover: color-mix(in oklch, var(--color-light-gray-min) 50%, var(--color-light-gray-mid));
+	--nav-item-background-active: color-mix(in oklch, var(--color-pink-mid) 15%, var(--color-white));
+
+	/* Scrollbars */
+	--scrollbar-bg: transparent;
+	--scrollbar-thumb-bg: color-mix(in oklch, var(--color-light-gray-mid) 60%, transparent);
+	--scrollbar-active-thumb-bg: var(--color-light-gray-max);
+
+	/* Dividers & guides */
+	--divider-color: color-mix(in oklch, var(--color-light-gray-min) 40%, var(--color-light-gray-mid));
+	--indentation-guide-color: color-mix(in oklch, var(--color-light-gray-mid) 40%, transparent);
+
+	/* Tags */
+	--tag-background: color-mix(in oklch, var(--color-pink-mid) 12%, var(--color-white));
+	--tag-color: var(--color-pink-mid);
+	--tag-background-hover: color-mix(in oklch, var(--color-pink-mid) 20%, var(--color-white));
+
+	/* Checkboxes */
+	--checkbox-color: var(--color-pink-mid);
+	--checkbox-border-color: var(--color-light-gray-max);
+
+	/* Tables */
+	--table-border-color: color-mix(in oklch, var(--color-light-gray-min) 40%, var(--color-light-gray-mid));
+	--table-header-background: var(--color-light-gray-min);
+
+	/* Graph */
+	--graph-line: color-mix(in oklch, var(--color-light-gray-mid) 50%, transparent);
+	--graph-node: var(--color-dark-gray-min);
+	--graph-node-focused: var(--color-pink-mid);
+
+	/* Caret */
+	--caret-color: var(--color-pink-mid);
+}
+
+/* ==================================
+   Color Decisions — Dark Theme
+   ==================================
+   Semantic color assignments for .theme-dark.
+   Maps base palette tokens to Obsidian's
+   standard CSS variables.
+   ================================== */
+
+.theme-dark {
+	/* Base color scale */
+	--color-base-00: var(--color-ink-min);
+	--color-base-05: color-mix(in oklch, var(--color-ink-min) 10%, var(--color-ink-mid));
+	--color-base-10: color-mix(in oklch, var(--color-ink-min) 20%, var(--color-ink-mid));
+	--color-base-20: color-mix(in oklch, var(--color-ink-min) 40%, var(--color-ink-mid));
+	--color-base-25: color-mix(in oklch, var(--color-ink-min) 50%, var(--color-ink-mid));
+	--color-base-30: color-mix(in oklch, var(--color-ink-min) 60%, var(--color-ink-mid));
+	--color-base-35: color-mix(in oklch, var(--color-ink-min) 70%, var(--color-ink-mid));
+	--color-base-40: color-mix(in oklch, var(--color-ink-min) 80%, var(--color-ink-mid));
+	--color-base-50: var(--color-ink-mid);
+	--color-base-60: color-mix(in oklch, var(--color-ink-mid) 30%, var(--color-ink-max));
+	--color-base-70: color-mix(in oklch, var(--color-ink-mid) 35%, var(--color-ink-max));
+	--color-base-100: var(--color-ink-max);
+
+	/* Semantic colors */
+	--color-action: var(--color-blue-min);
+	--color-info: var(--color-purple-min);
+	--color-success: var(--color-green-min);
+	--color-warning: var(--color-yellow-min);
+	--color-critical: var(--color-red-min);
+	--color-neutral: var(--color-light-gray-max);
+
+	/* Accent (HSL for Obsidian compatibility — approximation of pink-mid) */
+	--accent-h: 340;
+	--accent-s: 60%;
+	--accent-l: 50%;
+
+	/* Text colors */
+	--text-normal: var(--color-light-gray-min);
+	--text-muted: color-mix(in oklch, var(--color-light-gray-min) 60%, transparent);
+	--text-faint: color-mix(in oklch, var(--color-light-gray-min) 40%, transparent);
+	--text-error: var(--color-red-min);
+	--text-success: var(--color-green-min);
+	--text-warning: var(--color-yellow-min);
+	--text-on-accent: var(--text-muted);
+	--text-on-accent-inverted: var(--color-dark-gray-min);
+	--text-accent: color-mix(in oklch, var(--color-pink-mid) 50%, var(--color-pink-min));
+	--text-accent-hover: oklch(from var(--text-accent) calc(l + 0.15) c h);
+	--text-selection: var(--color-pink-mid);
+	--text-highlight-bg: color-mix(in oklch, var(--color-pink-mid) 30%, transparent);
+
+	/* Primary backgrounds */
+	--background-primary: var(--color-base-60);
+	--background-primary-alt: var(--color-base-50);
+	--background-secondary: var(--color-base-40);
+	--background-secondary-alt: var(--color-base-35);
+
+	/* Modifier backgrounds */
+	--background-modifier-border: var(--color-base-30);
+	--background-modifier-form-field: var(--color-base-50);
+	--background-modifier-form-field-highlighted: var(--color-base-40);
+	--background-modifier-box-shadow: color-mix(in oklch, var(--color-black) 30%, transparent);
+	--background-modifier-success: color-mix(in oklch, var(--color-green-max) 30%, var(--color-base-60));
+	--background-modifier-error: color-mix(in oklch, var(--color-red-max) 30%, var(--color-base-60));
+	--background-modifier-error-rgb: color-mix(in srgb, var(--color-red-max) 30%, var(--color-base-60));
+	--background-modifier-cover: color-mix(in oklch, var(--color-black) 60%, transparent);
+
+	/* Interactive elements */
+	--interactive-normal: var(--color-base-40);
+	--interactive-hover: var(--color-base-30);
+	--interactive-accent: var(--color-pink-mid);
+	--interactive-accent-rgb: color-mix(in srgb, var(--color-pink-mid) 100%, transparent);
+	--interactive-accent-hover: oklch(from var(--color-pink-mid) calc(l + 0.08) c h);
+	--interactive-success: var(--color-green-mid);
+
+	/* UI chrome */
+	--titlebar-background: var(--color-base-70);
+	--titlebar-background-focused: var(--color-base-60);
+	--ribbon-background: var(--color-base-70);
+	--ribbon-background-collapsed: var(--color-base-60);
+	--tab-background-active: var(--color-base-60);
+	--tab-text-color-active: var(--color-light-gray-min);
+	--tab-text-color-focused-active: var(--color-light-gray-min);
+
+	/* Navigation */
+	--nav-item-color: color-mix(in oklch, var(--color-light-gray-min) 70%, transparent);
+	--nav-item-background-hover: var(--color-base-40);
+	--nav-item-background-active: color-mix(in oklch, var(--color-pink-mid) 15%, var(--color-base-60));
+
+	/* Scrollbars */
+	--scrollbar-bg: transparent;
+	--scrollbar-thumb-bg: color-mix(in oklch, var(--color-light-gray-max) 30%, transparent);
+	--scrollbar-active-thumb-bg: color-mix(in oklch, var(--color-light-gray-max) 50%, transparent);
+
+	/* Dividers & guides */
+	--divider-color: var(--color-base-30);
+	--indentation-guide-color: color-mix(in oklch, var(--color-light-gray-max) 20%, transparent);
+
+	/* Tags */
+	--tag-background: color-mix(in oklch, var(--color-pink-mid) 15%, var(--color-base-60));
+	--tag-color: color-mix(in oklch, var(--color-pink-mid) 60%, var(--color-pink-min));
+	--tag-background-hover: color-mix(in oklch, var(--color-pink-mid) 25%, var(--color-base-60));
+
+	/* Checkboxes */
+	--checkbox-color: var(--color-pink-mid);
+	--checkbox-border-color: var(--color-base-25);
+
+	/* Tables */
+	--table-border-color: var(--color-base-30);
+	--table-header-background: var(--color-base-50);
+
+	/* Graph */
+	--graph-line: color-mix(in oklch, var(--color-light-gray-max) 20%, transparent);
+	--graph-node: color-mix(in oklch, var(--color-light-gray-min) 60%, transparent);
+	--graph-node-focused: var(--color-pink-mid);
+
+	/* Caret */
+	--caret-color: var(--color-pink-mid);
+}
+
+/* ==================================
+   Typography
+   ==================================
+   Font family, size, weight, line-height, and
+   letter-spacing assignments. Utility classes
+   and Obsidian element font mappings.
+   No visual styling (colors, backgrounds, borders).
+   ================================== */
+
+/*
+ * Playfair Display Variable Font (following Google Fonts guidance):
+ * - Weight range: 400-900 (use any value like 450, 625, 875)
+ * - Italic support: Both regular and italic styles
+ * - Optical sizing: Automatically adjusts based on font-size
+ *
+ * Google Fonts URL format: ital,wght@0,400..900;1,400..900
+ * - @0,400..900 = regular style with weight range 400-900
+ * - @1,400..900 = italic style with weight range 400-900
+ */
+
+:root {
+	--h1-font: var(--font-family-headings);
+	--h2-font: var(--font-family-headings);
+	--h3-font: var(--font-family-headings);
+	--inline-title-font: var(--font-family-headings);
+}
+
+/* ------------------------------
+   Utility Classes
+------------------------------ */
+
+/* Common heading styles */
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+	font-family: var(--font-family-headings);
+	font-style: italic;
+	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
+}
+
+.heading-1 {
+	font-size: var(--font-size-8);
+	font-weight: var(--font-weight-medium);
+}
+
+.heading-2 {
+	font-size: var(--font-size-7);
+	font-weight: var(--font-weight-medium);
+}
+
+.heading-3 {
+	font-size: var(--font-size-6);
+	font-weight: var(--font-weight-black);
+}
+
+.heading-4,
+.heading-5 {
+	font-weight: var(--font-weight-semibold);
+}
+
+.heading-4 {
+	font-size: var(--font-size-5);
+}
+
+.heading-5 {
+	font-size: var(--font-size-4);
+}
+
+.heading-6 {
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-semibold);
+}
+
+/* Common body text styles */
+.body-large,
+.body-base,
+.body-small,
+.caption {
+	font-family: var(--font-family-content);
+	font-weight: var(--font-weight-light);
+	letter-spacing: var(--letter-spacing-content);
+}
+
+.body-base,
+.body-small,
+.caption,
+.label {
+	line-height: var(--line-height-normal);
+}
+
+.body-large {
+	font-size: var(--font-size-4);
+	line-height: var(--line-height-relaxed);
+}
+
+.body-base {
+	font-size: var(--font-size-3);
+}
+
+.body-small,
+.label {
+	font-size: var(--font-size-2);
+}
+
+.caption {
+	font-size: var(--font-size-1);
+}
+
+.label {
+	font-family: var(--font-family-content);
+	font-weight: var(--font-weight-semibold);
+	letter-spacing: var(--letter-spacing-content);
+}
+
+/* ------------------------------
+   Obsidian Element Typography
+------------------------------ */
+
+/* Common heading font for all levels in editor and preview */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,
+.markdown-preview-view h1,
+.HyperMD-header-1.cm-line,
+.inline-title.cm-line h1,
+.HyperMD-list-line.cm-line .cm-header-1,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h2,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-2,
+.markdown-preview-view h2,
+.HyperMD-header-2.cm-line,
+.inline-title.cm-line h2,
+.HyperMD-list-line.cm-line .cm-header-2,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h3,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-3,
+.markdown-preview-view h3,
+.HyperMD-header-3.cm-line,
+.inline-title.cm-line h3,
+.HyperMD-list-line.cm-line .cm-header-3,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,
+.markdown-preview-view h4,
+.HyperMD-header-4.cm-line,
+.inline-title.cm-line h4,
+.HyperMD-list-line.cm-line .cm-header-4,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h5,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-5,
+.markdown-preview-view h5,
+.HyperMD-header-5.cm-line,
+.inline-title.cm-line h5,
+.HyperMD-list-line.cm-line .cm-header-5,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-6.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h6,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-6,
+.markdown-preview-view h6,
+.HyperMD-header-6.cm-line,
+.inline-title.cm-line h6,
+.HyperMD-list-line.cm-line .cm-header-6 {
+	font-family: var(--font-family-headings);
+	line-height: var(--line-height-tight);
+	letter-spacing: var(--letter-spacing-heading);
+}
+
+/*
+ * Heading spacing in editor:
+ * Do NOT use padding on .cm-line — CodeMirror 6 sets gutter element
+ * heights via inline styles based on DOM measurement. Extra padding
+ * on .cm-line causes cumulative drift between line numbers and content.
+ * The larger font-size + line-height already provides visual spacing.
+ */
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+	margin-top: var(--spacing-3) !important;
+	margin-bottom: var(--spacing-1) !important;
+}
+
+/* Italic style for H1-H5 */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,
+.markdown-preview-view h1,
+.HyperMD-header-1.cm-line,
+.inline-title.cm-line h1,
+.HyperMD-list-line.cm-line .cm-header-1,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h2,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-2,
+.markdown-preview-view h2,
+.HyperMD-header-2.cm-line,
+.inline-title.cm-line h2,
+.HyperMD-list-line.cm-line .cm-header-2,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h3,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-3,
+.markdown-preview-view h3,
+.HyperMD-header-3.cm-line,
+.inline-title.cm-line h3,
+.HyperMD-list-line.cm-line .cm-header-3,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,
+.markdown-preview-view h4,
+.HyperMD-header-4.cm-line,
+.inline-title.cm-line h4,
+.HyperMD-list-line.cm-line .cm-header-4,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h5,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-5,
+.markdown-preview-view h5,
+.HyperMD-header-5.cm-line,
+.inline-title.cm-line h5,
+.HyperMD-list-line.cm-line .cm-header-5 {
+	font-style: italic;
+}
+
+/* H1-H3 black weight */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,
+.markdown-preview-view h1,
+.HyperMD-header-1.cm-line,
+.inline-title.cm-line h1,
+.HyperMD-list-line.cm-line .cm-header-1,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h2,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-2,
+.markdown-preview-view h2,
+.HyperMD-header-2.cm-line,
+.inline-title.cm-line h2,
+.HyperMD-list-line.cm-line .cm-header-2,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h3,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-3,
+.markdown-preview-view h3,
+.HyperMD-header-3.cm-line,
+.inline-title.cm-line h3,
+.HyperMD-list-line.cm-line .cm-header-3 {
+	font-weight: var(--font-weight-black);
+}
+
+/* H4-H5 normal weight */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,
+.markdown-preview-view h4,
+.HyperMD-header-4.cm-line,
+.inline-title.cm-line h4,
+.HyperMD-list-line.cm-line .cm-header-4,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h5,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-5,
+.markdown-preview-view h5,
+.HyperMD-header-5.cm-line,
+.inline-title.cm-line h5,
+.HyperMD-list-line.cm-line .cm-header-5 {
+	font-weight: var(--font-weight-normal);
+}
+
+/* Individual heading sizes */
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-1.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h1,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-1,
+.markdown-preview-view h1,
+.HyperMD-header-1.cm-line,
+.inline-title.cm-line h1,
+.HyperMD-list-line.cm-line .cm-header-1 {
+	font-size: var(--font-size-8);
+}
+
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-2.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h2,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-2,
+.markdown-preview-view h2,
+.HyperMD-header-2.cm-line,
+.inline-title.cm-line h2,
+.HyperMD-list-line.cm-line .cm-header-2 {
+	font-size: var(--font-size-7);
+}
+
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-3.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h3,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-3,
+.markdown-preview-view h3,
+.HyperMD-header-3.cm-line,
+.inline-title.cm-line h3,
+.HyperMD-list-line.cm-line .cm-header-3 {
+	font-size: var(--font-size-6);
+}
+
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-4.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h4,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-4,
+.markdown-preview-view h4,
+.HyperMD-header-4.cm-line,
+.inline-title.cm-line h4,
+.HyperMD-list-line.cm-line .cm-header-4 {
+	font-size: var(--font-size-5);
+}
+
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-5.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h5,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-5,
+.markdown-preview-view h5,
+.HyperMD-header-5.cm-line,
+.inline-title.cm-line h5,
+.HyperMD-list-line.cm-line .cm-header-5 {
+	font-size: var(--font-size-4);
+}
+
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-header-6.cm-line,
+.markdown-source-view.mod-cm6 .cm-content .inline-title.cm-line h6,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-list-line.cm-line .cm-header-6,
+.markdown-preview-view h6,
+.HyperMD-header-6.cm-line,
+.inline-title.cm-line h6,
+.HyperMD-list-line.cm-line .cm-header-6 {
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-semibold);
+}
+
+/* Body text, paragraphs, and lists */
+.cm-content,
+.cm-line,
+.markdown-preview-view p,
+.markdown-preview-section,
+.cm-list-1,
+.cm-list-2,
+.cm-list-3,
+.markdown-preview-view ul,
+.markdown-preview-view ol,
+.markdown-preview-view li {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
+}
+
+/* Code blocks and inline code — font only */
+.cm-s-obsidian pre.HyperMD-codeblock,
+.HyperMD-codeblock-begin,
+.HyperMD-codeblock-end,
+.cm-line.HyperMD-codeblock,
+.markdown-preview-section pre,
+.markdown-preview-view pre,
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+	font-family: var(--font-family-monospace);
+	font-size: var(--font-size-2);
+	line-height: var(--line-height-relaxed);
+}
+
+/* Code blocks weight */
+.cm-s-obsidian pre.HyperMD-codeblock,
+.HyperMD-codeblock-begin,
+.HyperMD-codeblock-end,
+.cm-line.HyperMD-codeblock,
+.markdown-preview-section pre,
+.markdown-preview-view pre {
+	font-weight: var(--font-weight-light);
+}
+
+/* Inline code weight */
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+	font-weight: var(--font-weight-normal);
+}
+
+/* Editor list lines */
+.cm-line,
+[class^='cm-list-'].cm-line {
+	font-weight: var(--font-weight-normal);
+}
+
+/* Blockquote font */
+.cm-quote,
+.HyperMD-quote,
+.markdown-preview-view blockquote {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-4);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-relaxed);
+	font-style: italic;
+}
+
+/* ==================================
+   Editor — Content Styling
+   ==================================
+   Visual styling for the editor and preview:
+   blockquote borders, code backgrounds, bold
+   color, active line effect, links, embeds,
+   horizontal rules, images.
+   ================================== */
+
+/* ------------------------------
+   Blockquotes
+------------------------------ */
+
+/*
+ * Editor blockquotes: avoid margin/padding on .cm-line elements
+ * (HyperMD-quote is a .cm-line) — it causes gutter height drift.
+ * Use border + box-shadow for the accent bar instead.
+ */
+.HyperMD-quote {
+	border-left: var(--border-width-thick) solid var(--interactive-accent);
+}
+
+/* Preview blockquotes can use margin/padding freely */
+.markdown-preview-view blockquote {
+	padding-left: var(--spacing-3);
+	border-left: var(--border-width-thick) solid var(--interactive-accent);
+	margin: var(--spacing-3) 0;
+}
+
+/* ------------------------------
+   Inline Code
+------------------------------ */
+
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+	padding: var(--spacing-1) var(--spacing-2);
+	border-radius: var(--radius-2);
+	background-color: var(--background-modifier-border);
+}
+
+/* ------------------------------
+   Strong / Bold Text
+------------------------------ */
+
+.cm-strong,
+.cm-line .cm-strong,
+[class^='cm-list-'].cm-strong {
+	font-weight: var(--font-weight-bold);
+	color: var(--color-action);
+}
+
+/* ------------------------------
+   Links
+------------------------------ */
+
+.cm-url,
+.cm-link,
+.external-link,
+.internal-link,
+.markdown-preview-view a {
+	color: var(--text-accent);
+	transition: color var(--transition-fast) var(--ease-default);
+}
+
+.cm-url:hover,
+.cm-link:hover,
+.external-link:hover,
+.internal-link:hover,
+.markdown-preview-view a:hover {
+	color: var(--text-accent-hover);
+}
+
+/* ------------------------------
+   Horizontal Rules
+------------------------------ */
+
+.markdown-preview-view hr,
+.cm-line.hr {
+	border: none;
+	border-top: var(--border-width-thin) solid var(--background-modifier-border);
+	margin: var(--spacing-4) 0;
+}
+
+/* ------------------------------
+   Embeds
+------------------------------ */
+
+.internal-embed,
+.markdown-embed {
+	border-left: var(--border-width-medium) solid var(--interactive-accent);
+	padding-left: var(--spacing-3);
+}
+
+/* ------------------------------
+   Images
+------------------------------ */
+
+.image-embed img,
+.markdown-preview-view img {
+	border-radius: var(--radius-3);
+}
+
+/* ------------------------------
+   Active Line Effect
+------------------------------ */
+
+/* Reduce opacity for all lines in the editor */
+.cm-editor .cm-content .cm-line {
+	transition: color var(--transition-normal) var(--ease-default), background var(--transition-normal) var(--ease-default);
+	background: color-mix(in oklch, var(--color-ink-min) 0%, transparent);
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	border-radius: var(--radius-1);
+	color: color-mix(in oklch, var(--text-normal) var(--opacity-muted), transparent);
+
+	&[class*='HyperMD-header-'] {
+		inline-size: max-content;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+	}
+}
+
+/* Full opacity for the active line (where the caret is) */
+.cm-editor .cm-content .cm-active.cm-line,
+.cm-editor .cm-content .cm-activeLine {
+	background: color-mix(in oklch, var(--color-ink-min) 30%, transparent);
+	color: var(--text-normal);
+}
+
+/* ==================================
+   Sidebar — Ribbon, Nav Tree, Explorer
+   ==================================
+   Left/right sidebar structure: ribbon icons,
+   file explorer, folder tree, nav items.
+   ================================== */
+
+/* ------------------------------
+   Ribbon
+------------------------------ */
+
+.workspace-ribbon {
+	background-color: var(--ribbon-background);
+	transition: background-color var(--transition-normal) var(--ease-default);
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+	background-color: var(--ribbon-background-collapsed);
+}
+
+.side-dock-actions,
+.side-dock-ribbon-action {
+	color: var(--text-muted);
+	transition: color var(--transition-fast) var(--ease-default);
+
+	&:hover {
+		color: var(--text-normal);
+	}
+}
+
+/* ------------------------------
+   Navigation Items
+------------------------------ */
+
+.nav-file-title,
+.nav-folder-title {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-relaxed);
+	color: var(--nav-item-color);
+	transition: color var(--transition-fast) var(--ease-default),
+		background-color var(--transition-fast) var(--ease-default);
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+	background-color: var(--nav-item-background-hover);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+	background-color: var(--nav-item-background-active);
+	color: var(--text-normal);
+}
+
+/* ------------------------------
+   Folder Tree Lines
+------------------------------ */
+
+body:not(.mod-rtl).mk-folder-lines .mk-tree-item:before {
+	left: 10px;
+}
+
+/* ==================================
+   Tabs — Workspace Tab Headers
+   ==================================
+   Tab bar, individual tabs, active/hover
+   states, close buttons, dividers.
+   ================================== */
+
+.workspace-tab-header,
+.workspace-tab-header-inner {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-ui);
+}
+
+.workspace-tab-header {
+	transition: background-color var(--transition-fast) var(--ease-default),
+		color var(--transition-fast) var(--ease-default);
+}
+
+.workspace-tab-header.is-active {
+	background-color: var(--tab-background-active);
+	color: var(--tab-text-color-active);
+}
+
+/* ==================================
+   Status Bar
+   ==================================
+   Bottom status bar and its items.
+   ================================== */
+
+.status-bar {
+	border-top: var(--border-width-thin) solid var(--background-modifier-border);
+}
+
+.status-bar-item {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-1);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-normal);
+	color: var(--text-muted);
+}
+
+/* ==================================
+   Modals — Dialogs, Settings, Prompts
+   ==================================
+   Modal overlays, setting panels, command
+   palette / quick switcher.
+   ================================== */
+
+/* ------------------------------
+   Modal Overlay
+------------------------------ */
+
+.modal-bg {
+	background-color: var(--background-modifier-cover);
+}
+
+/* ------------------------------
+   Modal Container
+------------------------------ */
+
+.modal {
+	border-radius: var(--radius-4);
+	box-shadow: 0 var(--spacing-2) var(--spacing-5) var(--background-modifier-box-shadow);
+}
+
+.modal .modal-title {
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size-5);
+	font-weight: var(--font-weight-normal);
+	font-style: italic;
+	line-height: var(--line-height-tight);
+}
+
+/* ------------------------------
+   Settings Panel
+------------------------------ */
+
+.setting-item.setting-item-heading {
+	border-bottom: var(--border-width-thin) solid var(--background-modifier-border);
+}
+
+.setting-item .setting-item-name {
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-semibold);
+	font-style: italic;
+	line-height: var(--line-height-tight);
+	padding-top: var(--spacing-3);
+	padding-bottom: var(--spacing-1);
+}
+
+.setting-item .setting-item-description {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
+	color: var(--text-muted);
+}
+
+/* ------------------------------
+   Command Palette / Quick Switcher
+------------------------------ */
+
+.prompt {
+	border-radius: var(--radius-4);
+	box-shadow: 0 var(--spacing-2) var(--spacing-5) var(--background-modifier-box-shadow);
+}
+
+.prompt-input {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-normal);
+}
+
+.suggestion-item {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	transition: background-color var(--transition-fast) var(--ease-default);
+}
+
+.suggestion-item.is-selected {
+	background-color: var(--interactive-hover);
+}
+
+/* ==================================
+   Search — Results and Input
+   ==================================
+   Search panel, results list, matched text.
+   ================================== */
+
+.search-result-file-title {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-medium);
+	line-height: var(--line-height-normal);
+}
+
+.search-result-file-match {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-relaxed);
+}
+
+.search-result-file-matched-text {
+	color: var(--text-accent);
+	font-weight: var(--font-weight-semibold);
+}
+
+.search-input-container input {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-3);
+}
+
+/* ==================================
+   Elements — UI Components
+   ==================================
+   Notices, callouts, tags, checkboxes, tables,
+   tooltips, buttons, toggles, line numbers.
+   ================================== */
+
+/* ------------------------------
+   Notices
+------------------------------ */
+
+.notice {
+	position: relative;
+	overflow: hidden;
+	padding-left: calc(var(--accent-bar-width) + var(--spacing-3));
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: var(--accent-bar-width);
+		height: 100%;
+		background-color: var(--color-pink-mid);
+	}
+}
+
+/* ------------------------------
+   Callouts
+------------------------------ */
+
+.callout {
+	border-radius: var(--radius-3);
+	border-left: var(--accent-bar-width) solid;
+	padding: var(--spacing-2) var(--spacing-3);
+}
+
+.callout-title {
+	font-family: var(--font-family-content);
+	font-weight: var(--font-weight-semibold);
+	font-size: var(--font-size-3);
+}
+
+.callout-content {
+	font-size: var(--font-size-3);
+}
+
+/* ------------------------------
+   Tags
+------------------------------ */
+
+.tag,
+.cm-hashtag {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-1);
+	font-weight: var(--font-weight-medium);
+	background-color: var(--tag-background);
+	color: var(--tag-color);
+	border-radius: var(--radius-5);
+	padding: var(--spacing-1) var(--spacing-2);
+	transition: background-color var(--transition-fast) var(--ease-default);
+
+	&:hover {
+		background-color: var(--tag-background-hover);
+	}
+}
+
+/* ------------------------------
+   Checkboxes
+------------------------------ */
+
+.task-list-item-checkbox {
+	border: var(--border-width-medium) solid var(--checkbox-border-color);
+	border-radius: var(--radius-1);
+	transition: background-color var(--transition-fast) var(--ease-default),
+		border-color var(--transition-fast) var(--ease-default);
+}
+
+input[type='checkbox']:checked,
+.task-list-item-checkbox:checked {
+	background-color: var(--checkbox-color);
+	border-color: var(--checkbox-color);
+}
+
+/* ------------------------------
+   Tables
+------------------------------ */
+
+.markdown-preview-view table {
+	border-collapse: collapse;
+}
+
+.markdown-preview-view th,
+.markdown-preview-view td {
+	border: var(--border-width-thin) solid var(--table-border-color);
+	padding: var(--spacing-1) var(--spacing-2);
+}
+
+.markdown-preview-view th {
+	background-color: var(--table-header-background);
+	font-weight: var(--font-weight-semibold);
+}
+
+/* ------------------------------
+   Tooltips
+------------------------------ */
+
+.tooltip {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-1);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-normal);
+	border-radius: var(--radius-2);
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+.button,
+.mod-cta {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-ui);
+	border-radius: var(--radius-2);
+	transition: background-color var(--transition-fast) var(--ease-default),
+		color var(--transition-fast) var(--ease-default);
+}
+
+.mod-cta {
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+
+	&:hover {
+		background-color: var(--interactive-accent-hover);
+	}
+}
+
+.mod-warning {
+	background-color: var(--background-modifier-error);
+	color: var(--text-error);
+}
+
+/* ------------------------------
+   Toggles
+------------------------------ */
+
+.checkbox-container {
+	border-radius: var(--radius-5);
+	transition: background-color var(--transition-fast) var(--ease-default);
+}
+
+/* ------------------------------
+   View Headers
+------------------------------ */
+
+.view-header-title {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--line-height-tight);
+}
+
+/* ------------------------------
+   Line Numbers
+------------------------------ */
+
+/*
+ * Keep gutter element styling minimal — CodeMirror 6 manages
+ * heights via inline styles. Overriding display/padding/box-sizing
+ * can break the height sync between content and gutter.
+ */
+.markdown-source-view.mod-cm6 .cm-gutters .cm-lineNumbers .cm-gutterElement {
+	padding-right: var(--spacing-2);
+}
+
+/* ==================================
+   Graph View
+   ==================================
+   Graph canvas colors, node styling,
+   line colors, controls.
+   ================================== */
+
+.graph-view.color-fill {
+	color: var(--background-primary);
+}
+
+.graph-view.color-line {
+	color: var(--graph-line);
+}
+
+.graph-view.color-circle {
+	color: var(--graph-node);
+}
+
+.graph-view.color-fill-highlight {
+	color: var(--graph-node-focused);
+}
+
+.graph-view.color-fill-attachment {
+	color: var(--text-muted);
+}
+
+.graph-view.color-fill-tag {
+	color: var(--tag-color);
+}
+
+.graph-view.color-text {
+	color: var(--text-normal);
+}
+
+.graph-view.color-fill-unresolved {
+	color: var(--text-faint);
+}
+
+/* ==================================
+   Scrollbar
+   ==================================
+   Custom scrollbar appearance for
+   webkit-based browsers (Electron).
+   ================================== */
+
+::-webkit-scrollbar {
+	width: var(--spacing-2);
+	height: var(--spacing-2);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-thumb-bg);
+	border-radius: var(--radius-5);
+	transition: background var(--transition-fast) var(--ease-default);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-active-thumb-bg);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: var(--scrollbar-active-thumb-bg);
+}
+
+/* ==================================
+   Caret — Text Cursor Styling
+   ==================================
+   Rainbow pulse animation that cycles
+   through the color palette on a 10s loop.
+   ================================== */
+
+/* Rainbow animation with double pulse for caret */
+@keyframes caret-rainbow-pulse {
+	/* Red - double pulse */
+	0% {
+		--caret-color: color-mix(in oklch, var(--color-red-mid) 50%, var(--color-red-min));
+		--caret-opacity: 0.9;
+	}
+	0.5% {
+		--caret-opacity: 0.3;
+	}
+	1% {
+		--caret-opacity: 0.9;
+	}
+	1.5% {
+		--caret-opacity: 0.3;
+	}
+	2% {
+		--caret-opacity: 0.9;
+	}
+
+	/* Orange */
+	14.28% {
+		--caret-color: color-mix(in oklch, var(--color-orange-mid) 50%, var(--color-orange-min));
+		--caret-opacity: 0.9;
+	}
+	14.78% {
+		--caret-opacity: 0.3;
+	}
+	15.28% {
+		--caret-opacity: 0.9;
+	}
+	15.78% {
+		--caret-opacity: 0.3;
+	}
+	16.28% {
+		--caret-opacity: 0.9;
+	}
+
+	/* Yellow */
+	28.56% {
+		--caret-color: color-mix(in oklch, var(--color-yellow-mid) 50%, var(--color-yellow-min));
+		--caret-opacity: 0.9;
+	}
+	29.06% {
+		--caret-opacity: 0.3;
+	}
+	29.56% {
+		--caret-opacity: 0.9;
+	}
+	30.06% {
+		--caret-opacity: 0.3;
+	}
+	30.56% {
+		--caret-opacity: 0.9;
+	}
+
+	/* Green */
+	42.84% {
+		--caret-color: color-mix(in oklch, var(--color-green-mid) 50%, var(--color-green-min));
+		--caret-opacity: 0.9;
+	}
+	43.34% {
+		--caret-opacity: 0.3;
+	}
+	43.84% {
+		--caret-opacity: 0.9;
+	}
+	44.34% {
+		--caret-opacity: 0.3;
+	}
+	44.84% {
+		--caret-opacity: 0.9;
+	}
+
+	/* Blue */
+	57.12% {
+		--caret-color: color-mix(in oklch, var(--color-blue-mid) 50%, var(--color-blue-min));
+		--caret-opacity: 0.9;
+	}
+	57.62% {
+		--caret-opacity: 0.3;
+	}
+	58.12% {
+		--caret-opacity: 0.9;
+	}
+	58.62% {
+		--caret-opacity: 0.3;
+	}
+	59.12% {
+		--caret-opacity: 0.9;
+	}
+
+	/* Violet */
+	71.4% {
+		--caret-color: color-mix(in oklch, var(--color-violet-mid) 50%, var(--color-violet-min));
+		--caret-opacity: 0.9;
+	}
+	71.9% {
+		--caret-opacity: 0.3;
+	}
+	72.4% {
+		--caret-opacity: 0.9;
+	}
+	72.9% {
+		--caret-opacity: 0.3;
+	}
+	73.4% {
+		--caret-opacity: 0.9;
+	}
+
+	/* Purple */
+	85.68% {
+		--caret-color: color-mix(in oklch, var(--color-purple-mid) 50%, var(--color-purple-min));
+		--caret-opacity: 0.9;
+	}
+	86.18% {
+		--caret-opacity: 0.3;
+	}
+	86.68% {
+		--caret-opacity: 0.9;
+	}
+	87.18% {
+		--caret-opacity: 0.3;
+	}
+	87.68% {
+		--caret-opacity: 0.9;
+	}
+
+	/* Back to Red */
+	100% {
+		--caret-color: color-mix(in oklch, var(--color-red-mid) 50%, var(--color-red-min));
+		--caret-opacity: 0.9;
+	}
+}
+
+/* Apply caret styling */
+body {
+	--caret-color: var(--color-green-mid);
+	--caret-opacity: 0.9;
+	animation: caret-rainbow-pulse 10s ease-in-out infinite;
+}
+
+/* Bouncing animation for the caret */
+@keyframes caret-bounce {
+	0%,
+	100% {
+		transform: translateY(0) scaleY(1);
+	}
+	50% {
+		transform: translateY(-2px) scaleY(0.95);
+	}
+}
+
+/* Caret color for editor and inputs */
+.cm-editor .cm-content {
+	caret-color: var(--caret-color);
+}
+
+input,
+textarea {
+	caret-color: var(--caret-color);
+}

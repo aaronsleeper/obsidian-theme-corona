@@ -1,3 +1,11 @@
+/* ==================================
+   Variables — Foundation Tokens
+   ==================================
+   Core design tokens that all other files reference.
+   Includes typography scale, spacing, radii, z-index,
+   breakpoints, and Obsidian font variable mappings.
+   ================================== */
+
 :root {
 	/* Font Options for Testing */
 	--font-playfair: 'Playfair Display', serif;
@@ -50,6 +58,7 @@
 	/* Letter Spacing */
 	--letter-spacing-heading: 0.033em;
 	--letter-spacing-content: 0.01em;
+	--letter-spacing-ui: 0.05em;
 
 	/* Spacing Scale */
 	--spacing-1: 0.25rem; /* 4px */
@@ -66,6 +75,25 @@
 	--radius-3: 0.5rem; /* 8px */
 	--radius-4: 0.75rem; /* 12px */
 	--radius-5: 1rem; /* 16px */
+
+	/* Border Widths */
+	--border-width-thin: 1px;
+	--border-width-medium: 2px;
+	--border-width-thick: 4px;
+
+	/* Accent Bar */
+	--accent-bar-width: 8px;
+
+	/* Transitions */
+	--transition-fast: 150ms;
+	--transition-normal: 300ms;
+	--transition-slow: 500ms;
+	--ease-default: ease-in-out;
+
+	/* Opacity */
+	--opacity-muted: 0.84;
+	--opacity-faint: 0.6;
+	--opacity-ghost: 0.4;
 
 	/* Breakpoints */
 	--breakpoint-sm: 640px;
@@ -95,4 +123,12 @@ body {
 	--font-interface-theme: var(--font-family-content);
 	--font-text-theme: var(--font-family-content);
 	--font-monospace-theme: var(--font-family-monospace);
+
+	/* Heading sizes mapped to typography scale */
+	--h1-size: var(--font-size-8);
+	--h2-size: var(--font-size-7);
+	--h3-size: var(--font-size-6);
+	--h4-size: var(--font-size-5);
+	--h5-size: var(--font-size-4);
+	--h6-size: var(--font-size-3);
 }

@@ -1,0 +1,29 @@
+/* ==================================
+   Scrollbar
+   ==================================
+   Custom scrollbar appearance for
+   webkit-based browsers (Electron).
+   ================================== */
+
+::-webkit-scrollbar {
+	width: var(--spacing-2);
+	height: var(--spacing-2);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-thumb-bg);
+	border-radius: var(--radius-5);
+	transition: background var(--transition-fast) var(--ease-default);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-active-thumb-bg);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: var(--scrollbar-active-thumb-bg);
+}

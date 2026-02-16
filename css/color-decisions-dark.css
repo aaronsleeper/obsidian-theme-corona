@@ -1,0 +1,118 @@
+/* ==================================
+   Color Decisions — Dark Theme
+   ==================================
+   Semantic color assignments for .theme-dark.
+   Maps base palette tokens to Obsidian's
+   standard CSS variables.
+   ================================== */
+
+.theme-dark {
+	/* Base color scale */
+	--color-base-00: var(--color-ink-min);
+	--color-base-05: color-mix(in oklch, var(--color-ink-min) 10%, var(--color-ink-mid));
+	--color-base-10: color-mix(in oklch, var(--color-ink-min) 20%, var(--color-ink-mid));
+	--color-base-20: color-mix(in oklch, var(--color-ink-min) 40%, var(--color-ink-mid));
+	--color-base-25: color-mix(in oklch, var(--color-ink-min) 50%, var(--color-ink-mid));
+	--color-base-30: color-mix(in oklch, var(--color-ink-min) 60%, var(--color-ink-mid));
+	--color-base-35: color-mix(in oklch, var(--color-ink-min) 70%, var(--color-ink-mid));
+	--color-base-40: color-mix(in oklch, var(--color-ink-min) 80%, var(--color-ink-mid));
+	--color-base-50: var(--color-ink-mid);
+	--color-base-60: color-mix(in oklch, var(--color-ink-mid) 30%, var(--color-ink-max));
+	--color-base-70: color-mix(in oklch, var(--color-ink-mid) 35%, var(--color-ink-max));
+	--color-base-100: var(--color-ink-max);
+
+	/* Semantic colors */
+	--color-action: var(--color-blue-min);
+	--color-info: var(--color-purple-min);
+	--color-success: var(--color-green-min);
+	--color-warning: var(--color-yellow-min);
+	--color-critical: var(--color-red-min);
+	--color-neutral: var(--color-light-gray-max);
+
+	/* Accent (HSL for Obsidian compatibility — approximation of pink-mid) */
+	--accent-h: 340;
+	--accent-s: 60%;
+	--accent-l: 50%;
+
+	/* Text colors */
+	--text-normal: var(--color-light-gray-min);
+	--text-muted: color-mix(in oklch, var(--color-light-gray-min) 60%, transparent);
+	--text-faint: color-mix(in oklch, var(--color-light-gray-min) 40%, transparent);
+	--text-error: var(--color-red-min);
+	--text-success: var(--color-green-min);
+	--text-warning: var(--color-yellow-min);
+	--text-on-accent: var(--text-muted);
+	--text-on-accent-inverted: var(--color-dark-gray-min);
+	--text-accent: color-mix(in oklch, var(--color-pink-mid) 50%, var(--color-pink-min));
+	--text-accent-hover: oklch(from var(--text-accent) calc(l + 0.15) c h);
+	--text-selection: var(--color-pink-mid);
+	--text-highlight-bg: color-mix(in oklch, var(--color-pink-mid) 30%, transparent);
+
+	/* Primary backgrounds */
+	--background-primary: var(--color-base-60);
+	--background-primary-alt: var(--color-base-50);
+	--background-secondary: var(--color-base-40);
+	--background-secondary-alt: var(--color-base-35);
+
+	/* Modifier backgrounds */
+	--background-modifier-border: var(--color-base-30);
+	--background-modifier-form-field: var(--color-base-50);
+	--background-modifier-form-field-highlighted: var(--color-base-40);
+	--background-modifier-box-shadow: color-mix(in oklch, var(--color-black) 30%, transparent);
+	--background-modifier-success: color-mix(in oklch, var(--color-green-max) 30%, var(--color-base-60));
+	--background-modifier-error: color-mix(in oklch, var(--color-red-max) 30%, var(--color-base-60));
+	--background-modifier-error-rgb: color-mix(in srgb, var(--color-red-max) 30%, var(--color-base-60));
+	--background-modifier-cover: color-mix(in oklch, var(--color-black) 60%, transparent);
+
+	/* Interactive elements */
+	--interactive-normal: var(--color-base-40);
+	--interactive-hover: var(--color-base-30);
+	--interactive-accent: var(--color-pink-mid);
+	--interactive-accent-rgb: color-mix(in srgb, var(--color-pink-mid) 100%, transparent);
+	--interactive-accent-hover: oklch(from var(--color-pink-mid) calc(l + 0.08) c h);
+	--interactive-success: var(--color-green-mid);
+
+	/* UI chrome */
+	--titlebar-background: var(--color-base-70);
+	--titlebar-background-focused: var(--color-base-60);
+	--ribbon-background: var(--color-base-70);
+	--ribbon-background-collapsed: var(--color-base-60);
+	--tab-background-active: var(--color-base-60);
+	--tab-text-color-active: var(--color-light-gray-min);
+	--tab-text-color-focused-active: var(--color-light-gray-min);
+
+	/* Navigation */
+	--nav-item-color: color-mix(in oklch, var(--color-light-gray-min) 70%, transparent);
+	--nav-item-background-hover: var(--color-base-40);
+	--nav-item-background-active: color-mix(in oklch, var(--color-pink-mid) 15%, var(--color-base-60));
+
+	/* Scrollbars */
+	--scrollbar-bg: transparent;
+	--scrollbar-thumb-bg: color-mix(in oklch, var(--color-light-gray-max) 30%, transparent);
+	--scrollbar-active-thumb-bg: color-mix(in oklch, var(--color-light-gray-max) 50%, transparent);
+
+	/* Dividers & guides */
+	--divider-color: var(--color-base-30);
+	--indentation-guide-color: color-mix(in oklch, var(--color-light-gray-max) 20%, transparent);
+
+	/* Tags */
+	--tag-background: color-mix(in oklch, var(--color-pink-mid) 15%, var(--color-base-60));
+	--tag-color: color-mix(in oklch, var(--color-pink-mid) 60%, var(--color-pink-min));
+	--tag-background-hover: color-mix(in oklch, var(--color-pink-mid) 25%, var(--color-base-60));
+
+	/* Checkboxes */
+	--checkbox-color: var(--color-pink-mid);
+	--checkbox-border-color: var(--color-base-25);
+
+	/* Tables */
+	--table-border-color: var(--color-base-30);
+	--table-header-background: var(--color-base-50);
+
+	/* Graph */
+	--graph-line: color-mix(in oklch, var(--color-light-gray-max) 20%, transparent);
+	--graph-node: color-mix(in oklch, var(--color-light-gray-min) 60%, transparent);
+	--graph-node-focused: var(--color-pink-mid);
+
+	/* Caret */
+	--caret-color: var(--color-pink-mid);
+}

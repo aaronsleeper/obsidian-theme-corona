@@ -1,0 +1,83 @@
+/* ==================================
+   Modals — Dialogs, Settings, Prompts
+   ==================================
+   Modal overlays, setting panels, command
+   palette / quick switcher.
+   ================================== */
+
+/* ------------------------------
+   Modal Overlay
+------------------------------ */
+
+.modal-bg {
+	background-color: var(--background-modifier-cover);
+}
+
+/* ------------------------------
+   Modal Container
+------------------------------ */
+
+.modal {
+	border-radius: var(--radius-4);
+	box-shadow: 0 var(--spacing-2) var(--spacing-5) var(--background-modifier-box-shadow);
+}
+
+.modal .modal-title {
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size-5);
+	font-weight: var(--font-weight-normal);
+	font-style: italic;
+	line-height: var(--line-height-tight);
+}
+
+/* ------------------------------
+   Settings Panel
+------------------------------ */
+
+.setting-item.setting-item-heading {
+	border-bottom: var(--border-width-thin) solid var(--background-modifier-border);
+}
+
+.setting-item .setting-item-name {
+	font-family: var(--font-family-headings);
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-semibold);
+	font-style: italic;
+	line-height: var(--line-height-tight);
+	padding-top: var(--spacing-3);
+	padding-bottom: var(--spacing-1);
+}
+
+.setting-item .setting-item-description {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-content);
+	color: var(--text-muted);
+}
+
+/* ------------------------------
+   Command Palette / Quick Switcher
+------------------------------ */
+
+.prompt {
+	border-radius: var(--radius-4);
+	box-shadow: 0 var(--spacing-2) var(--spacing-5) var(--background-modifier-box-shadow);
+}
+
+.prompt-input {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-3);
+	font-weight: var(--font-weight-normal);
+}
+
+.suggestion-item {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	transition: background-color var(--transition-fast) var(--ease-default);
+}
+
+.suggestion-item.is-selected {
+	background-color: var(--interactive-hover);
+}

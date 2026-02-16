@@ -1,0 +1,17 @@
+/* ==================================
+   Status Bar
+   ==================================
+   Bottom status bar and its items.
+   ================================== */
+
+.status-bar {
+	border-top: var(--border-width-thin) solid var(--background-modifier-border);
+}
+
+.status-bar-item {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-1);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-normal);
+	color: var(--text-muted);
+}

@@ -1,0 +1,25 @@
+/* ==================================
+   Tabs — Workspace Tab Headers
+   ==================================
+   Tab bar, individual tabs, active/hover
+   states, close buttons, dividers.
+   ================================== */
+
+.workspace-tab-header,
+.workspace-tab-header-inner {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-normal);
+	letter-spacing: var(--letter-spacing-ui);
+}
+
+.workspace-tab-header {
+	transition: background-color var(--transition-fast) var(--ease-default),
+		color var(--transition-fast) var(--ease-default);
+}
+
+.workspace-tab-header.is-active {
+	background-color: var(--tab-background-active);
+	color: var(--tab-text-color-active);
+}

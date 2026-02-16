@@ -1,6 +1,9 @@
-/* ------------------------------
-   Text Caret Styling
------------------------------- */
+/* ==================================
+   Caret — Text Cursor Styling
+   ==================================
+   Rainbow pulse animation that cycles
+   through the color palette on a 10s loop.
+   ================================== */
 
 /* Rainbow animation with double pulse for caret */
 @keyframes caret-rainbow-pulse {
@@ -155,7 +158,7 @@ body {
 	}
 }
 
-/* Caret color for inputs and textareas */
+/* Caret color for editor and inputs */
 .cm-editor .cm-content {
 	caret-color: var(--caret-color);
 }

@@ -1,0 +1,128 @@
+/* ==================================
+   Editor — Content Styling
+   ==================================
+   Visual styling for the editor and preview:
+   blockquote borders, code backgrounds, bold
+   color, active line effect, links, embeds,
+   horizontal rules, images.
+   ================================== */
+
+/* ------------------------------
+   Blockquotes
+------------------------------ */
+
+/*
+ * Editor blockquotes: avoid margin/padding on .cm-line elements
+ * (HyperMD-quote is a .cm-line) — it causes gutter height drift.
+ * Use border + box-shadow for the accent bar instead.
+ */
+.HyperMD-quote {
+	border-left: var(--border-width-thick) solid var(--interactive-accent);
+}
+
+/* Preview blockquotes can use margin/padding freely */
+.markdown-preview-view blockquote {
+	padding-left: var(--spacing-3);
+	border-left: var(--border-width-thick) solid var(--interactive-accent);
+	margin: var(--spacing-3) 0;
+}
+
+/* ------------------------------
+   Inline Code
+------------------------------ */
+
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+	padding: var(--spacing-1) var(--spacing-2);
+	border-radius: var(--radius-2);
+	background-color: var(--background-modifier-border);
+}
+
+/* ------------------------------
+   Strong / Bold Text
+------------------------------ */
+
+.cm-strong,
+.cm-line .cm-strong,
+[class^='cm-list-'].cm-strong {
+	font-weight: var(--font-weight-bold);
+	color: var(--color-action);
+}
+
+/* ------------------------------
+   Links
+------------------------------ */
+
+.cm-url,
+.cm-link,
+.external-link,
+.internal-link,
+.markdown-preview-view a {
+	color: var(--text-accent);
+	transition: color var(--transition-fast) var(--ease-default);
+}
+
+.cm-url:hover,
+.cm-link:hover,
+.external-link:hover,
+.internal-link:hover,
+.markdown-preview-view a:hover {
+	color: var(--text-accent-hover);
+}
+
+/* ------------------------------
+   Horizontal Rules
+------------------------------ */
+
+.markdown-preview-view hr,
+.cm-line.hr {
+	border: none;
+	border-top: var(--border-width-thin) solid var(--background-modifier-border);
+	margin: var(--spacing-4) 0;
+}
+
+/* ------------------------------
+   Embeds
+------------------------------ */
+
+.internal-embed,
+.markdown-embed {
+	border-left: var(--border-width-medium) solid var(--interactive-accent);
+	padding-left: var(--spacing-3);
+}
+
+/* ------------------------------
+   Images
+------------------------------ */
+
+.image-embed img,
+.markdown-preview-view img {
+	border-radius: var(--radius-3);
+}
+
+/* ------------------------------
+   Active Line Effect
+------------------------------ */
+
+/* Reduce opacity for all lines in the editor */
+.cm-editor .cm-content .cm-line {
+	transition: color var(--transition-normal) var(--ease-default), background var(--transition-normal) var(--ease-default);
+	background: color-mix(in oklch, var(--color-ink-min) 0%, transparent);
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	border-radius: var(--radius-1);
+	color: color-mix(in oklch, var(--text-normal) var(--opacity-muted), transparent);
+
+	&[class*='HyperMD-header-'] {
+		inline-size: max-content;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+	}
+}
+
+/* Full opacity for the active line (where the caret is) */
+.cm-editor .cm-content .cm-active.cm-line,
+.cm-editor .cm-content .cm-activeLine {
+	background: color-mix(in oklch, var(--color-ink-min) 30%, transparent);
+	color: var(--text-normal);
+}

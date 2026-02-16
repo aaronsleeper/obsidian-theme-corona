@@ -1,0 +1,84 @@
+/* ==================================
+   Color Choices — Base Palettes
+   ==================================
+   Raw color definitions using OKLch color space.
+   Each hue has three stops: min (lightest),
+   mid (medium), max (darkest).
+   ================================== */
+
+:root {
+	/* Green Color Palette */
+	--color-green-min: oklch(0.98 0.05 160);
+	--color-green-mid: oklch(0.65 0.2 160);
+	--color-green-max: oklch(0.2 0.08 160);
+
+	/* Blue Color Palette */
+	--color-blue-min: oklch(0.95 0.08 220);
+	--color-blue-mid: oklch(0.5 0.28 220);
+	--color-blue-max: oklch(0.2 0.15 220);
+
+	/* Violet Color Palette */
+	--color-violet-min: oklch(0.95 0.05 280);
+	--color-violet-mid: oklch(0.5 0.24 280);
+	--color-violet-max: oklch(0.2 0.12 280);
+
+	/* Purple Color Palette */
+	--color-purple-min: oklch(0.95 0.05 300);
+	--color-purple-mid: oklch(0.5 0.24 300);
+	--color-purple-max: oklch(0.2 0.12 300);
+
+	/* Pink Color Palette */
+	--color-pink-min: oklch(0.95 0.05 340);
+	--color-pink-mid: oklch(0.5 0.24 340);
+	--color-pink-max: oklch(0.2 0.12 340);
+
+	/* Red Color Palette */
+	--color-red-min: oklch(0.95 0.05 20);
+	--color-red-mid: oklch(0.5 0.24 20);
+	--color-red-max: oklch(0.2 0.12 20);
+
+	/* Orange Color Palette */
+	--color-orange-min: oklch(0.95 0.05 60);
+	--color-orange-mid: oklch(0.5 0.24 60);
+	--color-orange-max: oklch(0.2 0.12 60);
+
+	/* Yellow Color Palette */
+	--color-yellow-min: oklch(0.95 0.05 100);
+	--color-yellow-mid: oklch(0.5 0.24 100);
+	--color-yellow-max: oklch(0.2 0.12 100);
+
+	/* Light Gray Color Palette */
+	--color-light-gray-min: oklch(0.98 0.002 240);
+	--color-light-gray-mid: oklch(0.81 0.009 240);
+	--color-light-gray-max: oklch(0.54 0.018 240);
+
+	/* Dark Gray Color Palette */
+	--color-dark-gray-min: oklch(0.38 0.004 240);
+	--color-dark-gray-mid: oklch(0.245 0.004 240);
+	--color-dark-gray-max: oklch(0.11 0.004 240);
+
+	/* Ink Color Palette */
+	--color-ink-min: oklch(0.28 0.08 280);
+	--color-ink-mid: oklch(0.18 0.08 280);
+	--color-ink-max: oklch(0.1 0.08 280);
+
+	/* Utility Colors */
+	--color-black: oklch(0 0 0);
+	--color-white: oklch(1 0 0);
+}
+
+/* Extended color aliases */
+body {
+	--color-red: var(--color-red-mid);
+	--color-red-rgb: color-mix(in srgb, var(--color-red) 100%, transparent);
+	--color-orange: var(--color-orange-mid);
+	--color-orange-rgb: color-mix(in srgb, var(--color-orange) 100%, transparent);
+	--color-yellow: var(--color-yellow-mid);
+	--color-yellow-rgb: color-mix(in srgb, var(--color-yellow) 100%, transparent);
+	--color-green: var(--color-green-mid);
+	--color-green-rgb: color-mix(in srgb, var(--color-green) 100%, transparent);
+	--color-blue: var(--color-blue-mid);
+	--color-blue-rgb: color-mix(in srgb, var(--color-blue) 100%, transparent);
+	--color-purple: var(--color-purple-mid);
+	--color-purple-rgb: color-mix(in srgb, var(--color-purple) 100%, transparent);
+}

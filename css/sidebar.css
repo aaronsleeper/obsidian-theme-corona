@@ -1,0 +1,63 @@
+/* ==================================
+   Sidebar — Ribbon, Nav Tree, Explorer
+   ==================================
+   Left/right sidebar structure: ribbon icons,
+   file explorer, folder tree, nav items.
+   ================================== */
+
+/* ------------------------------
+   Ribbon
+------------------------------ */
+
+.workspace-ribbon {
+	background-color: var(--ribbon-background);
+	transition: background-color var(--transition-normal) var(--ease-default);
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+	background-color: var(--ribbon-background-collapsed);
+}
+
+.side-dock-actions,
+.side-dock-ribbon-action {
+	color: var(--text-muted);
+	transition: color var(--transition-fast) var(--ease-default);
+
+	&:hover {
+		color: var(--text-normal);
+	}
+}
+
+/* ------------------------------
+   Navigation Items
+------------------------------ */
+
+.nav-file-title,
+.nav-folder-title {
+	font-family: var(--font-family-content);
+	font-size: var(--font-size-2);
+	font-weight: var(--font-weight-light);
+	line-height: var(--line-height-relaxed);
+	color: var(--nav-item-color);
+	transition: color var(--transition-fast) var(--ease-default),
+		background-color var(--transition-fast) var(--ease-default);
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+	background-color: var(--nav-item-background-hover);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+	background-color: var(--nav-item-background-active);
+	color: var(--text-normal);
+}
+
+/* ------------------------------
+   Folder Tree Lines
+------------------------------ */
+
+body:not(.mod-rtl).mk-folder-lines .mk-tree-item:before {
+	left: 10px;
+}
