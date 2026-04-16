@@ -20,7 +20,7 @@ const cssDir = join(__dirname, 'css');
 const outFile = join(__dirname, 'theme.css');
 
 // Vault path for live preview (edit to match your setup)
-const vaultThemeDir = '/Users/aaronsleeper/Desktop/Vaults/Stack Overflowed/.obsidian/themes/Corona';
+const vaultThemeDir = '/Users/aaronsleeper/Vaults/Stack Overflowed/.obsidian/themes/Corona';
 const vaultThemePath = join(vaultThemeDir, 'theme.css');
 const vaultManifestPath = join(vaultThemeDir, 'manifest.json');
 const manifestPath = join(__dirname, 'manifest.json');
